@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="app_name">Hammer</string>
+
+	<string name="save_all_toast">Semua Adegan Tersimpan</string>
+
+	<string name="unsaved_scenes_dialog_title">Adegan yang Belum Tersimpan</string>
+	<string name="unsaved_scenes_dialog_message">Apa yang harus dilakukan dengan adegan yang belum tersimpan?</string>
+
+	<string name="unsaved_encyclopedia_dialog_title">Entri Ensiklopedia yang Belum Tersimpan</string>
+	<string name="unsaved_encyclopedia_dialog_message">Buang entri?</string>
+
+	<string name="unsaved_notes_dialog_title">Catatan yang Belum Tersimpan</string>
+	<string name="unsaved_notes_dialog_message">Buang catatan?</string>
+
+	<string name="unsaved_timeline_dialog_title">Peristiwa Linimasa yang Belum Tersimpan</string>
+	<string name="unsaved_timeline_dialog_message">Buang peristiwa?</string>
+
+	<string name="unsaved_dialog_negative_button">Batal</string>
+	<string name="unsaved_dialog_positive_button">Buang dan tutup</string>
+
+	<string name="unsaved_entity_dialog_negative_button">Buang</string>
+	<string name="unsaved_entity_dialog_neutral_button">Batal</string>
+	<string name="unsaved_entity_dialog_positive_button">Simpan</string>
+
+	<string name="close_dialog_button">Tutup</string>
+	<string name="more_menu_button">Lainnya</string>
+
+	<string name="network_request_failure_parse_body">Gagal mengurai isi respons: %1$s</string>
+
+	<string name="confirm_dialog_positive">Ya</string>
+	<string name="confirm_dialog_negative">Tidak</string>
+
+
+	<string name="expand">Perluas</string>
+	<string name="collapse">Ciutkan</string>
+
+	<string name="markdown_format_bar_decrease_text_size">Perkecil ukuran teks</string>
+	<string name="markdown_format_bar_increase_text_size">Perbesar ukuran teks</string>
+	<string name="markdown_format_bar_reset_text_size">Atur ulang ukuran teks</string>
+	<string name="markdown_format_bar_find_replace">Temukan dan ganti</string>
+
+	<string name="markdown_format_bar_bold">Tebal</string>
+	<string name="markdown_format_bar_italic">Miring</string>
+	<string name="markdown_format_bar_strikethrough">Coret</string>
+	<string name="markdown_format_bar_heading">Judul</string>
+	<string name="markdown_format_bar_blockquote">Kutipan</string>
+	<string name="markdown_format_bar_bullet_list">Daftar berpoin</string>
+	<string name="markdown_format_bar_numbered_list">Daftar bernomor</string>
+	<string name="markdown_format_bar_horizontal_rule">Garis horizontal</string>
+	<string name="markdown_format_bar_undo">Urungkan</string>
+	<string name="markdown_format_bar_redo">Ulangi</string>
+	<string name="form_dialog_keyboard_hint">ESC membatalkan</string>
+</resources>

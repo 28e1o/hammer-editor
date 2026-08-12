@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="draft_compare_current_header">Gabungkan dengan Saat Ini</string>
+	<string name="draft_compare_current_subheader">Salin bagian draft ke sini</string>
+	<string name="draft_compare_current_accept_button">Ambil Hasil Gabungan</string>
+	<string name="draft_compare_draft_header">Draft: %1$s</string>
+	<string name="draft_compare_draft_subheader">Salin bagian yang diinginkan ke draft saat ini, atau ambil semuanya.</string>
+	<string name="draft_compare_draft_accept_button">Ambil seluruh draft ini</string>
+	<string name="draft_compare_tab_title_draft">Draft</string>
+	<string name="draft_compare_tab_title_current">Saat Ini</string>
+
+	<string name="draft_list_header">%1$s Draft:</string>
+	<string name="draft_list_empty">Tidak Ada Draft Ditemukan</string>
+
+	<string name="scene_draft_invalid_name">Nama tidak valid</string>
+</resources>

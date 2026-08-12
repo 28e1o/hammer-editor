@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="account_settings_breadcrumb">AKUN</string>
+	<string name="account_settings_subtitle_local_install">INSTALASI LOKAL</string>
+	<string name="account_settings_folio_caption">PENGATURAN AKUN</string>
+	<string name="settings_backups_header">Cadangan</string>
+	<string
+		name="settings_backups_explainations">Sistem cadangan ini dimaksudkan untuk melindungi dari kehilangan dan kerusakan data. Ini BUKAN ditujukan sebagai cara untuk menyimpan revisi lama cerita Anda. Gunakan sistem Draft untuk itu.
+	</string>
+	<string name="settings_backups_manage_button">Kelola Cadangan</string>
+	<string name="settings_theme_label">Tema UI</string>
+	<string name="settings_theme_light">TERANG</string>
+	<string name="settings_theme_dark">GELAP</string>
+	<string name="settings_theme_followsystem">SISTEM</string>
+	<string name="settings_initial_screen_label">Layar Proyek Awal</string>
+	<string name="settings_initial_screen_home">Beranda</string>
+	<string name="settings_initial_screen_editor">Editor Adegan</string>
+	<string name="settings_projects_directory">Direktori Proyek</string>
+	<string name="settings_projects_directory_description">Tetapkan direktori yang akan digunakan Hammer untuk menyimpan data proyek.
+	</string>
+	<string name="settings_projects_directory_button">Pilih Direktori</string>
+	<string name="settings_example_project_header">Proyek Contoh</string>
+	<string
+		name="settings_example_project_description">Pasang proyek contoh untuk melihat bagaimana berbagai fitur digunakan.
+	</string>
+	<string name="settings_example_project_button">Pasang Ulang</string>
+	<string name="settings_example_project_success_message">Proyek contoh dibuat.</string>
+	<string name="settings_server_status_connected">TERHUBUNG</string>
+	<string name="settings_server_status_not_connected">BELUM TERHUBUNG</string>
+	<string name="settings_server_url_greeble">URL</string>
+	<string name="settings_server_help_link">BANTUAN ↗</string>
+	<string name="settings_server_description">Konfigurasikan sinkronisasi data</string>
+	<string name="settings_server_setup_button">Siapkan</string>
+	<string name="settings_server_auto_sync">Sinkronisasi Otomatis</string>
+	<string name="settings_server_sync_backup">Cadangkan saat sinkron</string>
+	<string name="settings_server_sync_auto_close">Tutup Dialog Sinkron saat Berhasil</string>
+	<string name="settings_server_max_backups">Maks. Cadangan per Proyek</string>
+	<string name="settings_server_max_backups_error">Harus antara 1 dan %1$d</string>
+	<string name="settings_server_remove_server_button">Hapus Server</string>
+	<string name="settings_remove_server_dialog_title">Hapus Server</string>
+	<string name="settings_remove_server_dialog_message">Anda yakin ingin menghapus server?</string>
+	<string name="settings_server_setup_title">Siapkan Server</string>
+	<string name="settings_server_setup_url_hint">URL Server: hammer.ink</string>
+	<string name="settings_server_setup_email_hint">E-Mail: user@example.com</string>
+	<string name="settings_server_setup_password_hint">Kata sandi</string>
+	<string name="settings_server_setup_password_show">Tampilkan kata sandi</string>
+	<string name="settings_server_setup_password_hide">Sembunyikan kata sandi</string>
+	<string name="settings_server_setup_login_button">Masuk</string>
+	<string name="settings_server_setup_create_button">Buat</string>
+	<string name="settings_server_setup_cancel_button">Batal</string>
+	<string name="remove_local_dialog_title">Hapus Konten Lokal?</string>
+	<string
+		name="remove_local_dialog_message">Haruskah kami menghapus konten lokal Anda saat ini sebelum sinkronisasi? Jika tidak, kami akan mencoba menggabungkan konten lokal Anda dengan konten server. Jika kontennya tidak saling berhubungan, hal ini dapat menimbulkan masalah.
+	</string>
+	<string name="settings_platform_settings_title">Pengaturan Platform</string>
+	<string name="settings_platform_settings_empty">Tidak ada pengaturan khusus platform.</string>
+	<string name="settings_keep_screen_on">Pertahankan layar tetap menyala</string>
+	<string name="settings_enable_dnd_focus_mode_title">Aktifkan Jangan Ganggu saat Mode Fokus</string>
+	<string name="settings_dnd_permission_button">Beri Izin DND</string>
+	<string
+		name="settings_dnd_permission_explanation">Hammer memerlukan izin untuk mengaktifkan mode Jangan Ganggu saat Anda dalam Mode Fokus.
+	</string>
+	<string name="settings_storage_public_label">Simpan proyek di penyimpanan publik</string>
+	<string
+		name="settings_storage_public_hint">Simpan proyek Anda di folder Dokumen bersama agar aplikasi lain dan pengelola file Anda dapat mengaksesnya.
+	</string>
+	<string name="settings_storage_location_label">Lokasi Proyek</string>
+	<string
+		name="settings_storage_permission_explanation">Hammer memerlukan izin akses file untuk menyimpan proyek di penyimpanan publik.
+	</string>
+	<string name="settings_storage_permission_button">Beri Izin Akses File</string>
+
+	<string name="notice_experimental_label">Eksperimental</string>
+	<string name="settings_spellcheck_heading">Pemeriksaan Ejaan</string>
+	<string name="settings_spellcheck_notice">Jika menimbulkan masalah, matikan saja.</string>
+	<string name="settings_spellcheck_enable">Aktifkan pemeriksaan ejaan</string>
+	<string name="settings_spellcheck_in_focus_enable">Aktifkan dalam mode fokus</string>
+	<string name="settings_spellcheck_dictionary">Kamus</string>
+	<string name="settings_spellcheck_dictionary_android_info_title">Bahasa pemeriksaan ejaan</string>
+	<string name="settings_spellcheck_dictionary_android_info_message">Di Android, bahasa pemeriksaan ejaan dipilih oleh perangkat, bukan oleh aplikasi. Untuk mengubahnya, perbarui bahasa sistem dan bahasa keyboard Anda di Pengaturan Android.</string>
+	<string
+		name="settings_server_enable_sync_backup_desc">Siapkan server untuk menyinkronkan proyek Anda antar perangkat dan membuat cadangan yang aman.
+	</string>
+	<string name="settings_server_sync_backup_preferences">Preferensi Sinkronisasi &amp; Cadangan</string>
+	<string name="settings_server_danger_zone">Zona Berbahaya</string>
+
+	<!-- Backup Manager Dialog -->
+	<string name="backup_manager_error_load_backups">Gagal memuat cadangan: %1$s</string>
+	<string name="backup_manager_error_load_project_backups">Gagal memuat cadangan untuk proyek: %1$s</string>
+	<string name="backup_manager_error_delete_backup">Gagal menghapus cadangan: %1$s</string>
+	<string name="backup_restore_dialog_title">Pulihkan Cadangan</string>
+	<string
+		name="backup_restore_dialog_message">Peringatan: Memulihkan cadangan ini akan sepenuhnya menggantikan konten proyek saat ini. Semua file yang ada akan dihapus dan diganti dengan data cadangan. Tindakan ini tidak dapat dibatalkan.
+	</string>
+	<string name="backup_restore_dialog_confirm">Pulihkan</string>
+	<string name="backup_restore_dialog_cancel">Batal</string>
+	<string name="backup_manager_title">Kelola Cadangan</string>
+	<string name="backup_manager_no_backups">Tidak ada cadangan ditemukan</string>
+	<string name="backup_manager_select_project_hint">Pilih proyek</string>
+	<string name="backup_manager_no_backups_for_project">Tidak ada cadangan untuk proyek ini</string>
+	<string name="backup_manager_restore_button">Pulihkan</string>
+	<string name="backup_manager_delete_button">Hapus cadangan</string>
+	<string name="backup_manager_show_button">Tampilkan di Folder</string>
+	<string name="backup_manager_export_button">Ekspor</string>
+	<string name="account_sync_confirm_cancel_title">Batalkan Sinkronisasi?</string>
+	<string name="account_sync_confirm_cancel_message">Anda yakin ingin membatalkan sinkronisasi?</string>
+	<string name="account_sync_toast_canceled">Sinkronisasi dibatalkan</string>
+
+	<!-- Server Setup Validation Errors -->
+	<string name="server_setup_error_unknown">Terjadi kesalahan tak terduga. Silakan coba lagi.</string>
+	<string
+		name="server_setup_error_invalid_url">Alamat server tidak valid. Masukkan URL seperti "hammer.ink" atau alamat IP.
+	</string>
+	<string name="server_setup_error_invalid_email">Masukkan alamat email yang valid.</string>
+	<string name="server_setup_error_password_too_short">Kata sandi minimal harus 8 karakter.</string>
+	<string name="server_setup_error_password_too_long">Kata sandi maksimal 64 karakter.</string>
+	<string name="server_setup_error_password_no_uppercase">Kata sandi harus mengandung setidaknya satu huruf besar.
+	</string>
+	<string name="server_setup_error_password_no_lowercase">Kata sandi harus mengandung setidaknya satu huruf kecil.
+	</string>
+	<string name="server_setup_error_password_no_number">Kata sandi harus mengandung setidaknya satu angka.</string>
+	<string name="server_setup_error_password_no_special">Kata sandi harus mengandung setidaknya satu karakter khusus.</string>
+
+	<!-- Server Setup Toast Messages -->
+	<string name="settings_server_setup_toast_success">Pengaturan server berhasil!</string>
+	<string name="settings_server_setup_toast_failure">Pengaturan server gagal: %1$s</string>
+	<string
+		name="settings_server_setup_toast_failure_unknown">Pengaturan server gagal. Periksa koneksi Anda dan coba lagi.
+	</string>
+
+	<!-- Terms of Service -->
+	<string name="settings_server_tos_title">Ketentuan Layanan</string>
+	<string name="settings_server_tos_accept">Terima</string>
+	<string name="settings_server_tos_decline">Tolak</string>
+	<string name="settings_server_tos_declined">Anda harus menerima Ketentuan Layanan untuk membuat akun.</string>
+
+	<!-- Network Errors -->
+	<string
+		name="server_error_connection_timeout">Tidak dapat terhubung ke server. Pastikan server berjalan dan alamatnya benar.
+	</string>
+	<string name="server_error_timeout">Server tidak merespons. Periksa koneksi internet Anda dan coba lagi.
+	</string>
+	<string name="server_error_dns">Server tidak ditemukan. Periksa alamat server dan koneksi internet Anda.</string>
+	<string
+		name="server_error_connection_generic">Kesalahan jaringan saat menghubungi %1$s. Periksa koneksi Anda dan coba lagi.
+	</string>
+	<string name="server_error_tls">Tidak dapat membuat koneksi aman ke %1$s. Hammer hanya terhubung melalui HTTPS, jadi server memerlukan sertifikat TLS valid miliknya sendiri atau proxy balik yang menyediakannya.</string>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="account_window_title">Hammer - Pemilihan Proyek</string>
+
+	<string name="project_window_title">Hammer - %1$s</string>
+	<string name="project_window_menu_file">File</string>
+	<string name="project_window_menu_item_close">Tutup Proyek</string>
+	<string name="project_window_menu_item_exit">Keluar</string>
+
+	<string name="jump_list_recent_projects">Proyek Terakhir</string>
+
+	<!-- Sandbox first-run projects-directory flow (Mac App Store builds) -->
+	<string name="sandbox_intro_title">Selamat Datang di Hammer</string>
+	<string name="sandbox_intro_message">Hammer menyimpan proyek Anda di folder yang Anda pilih, sehingga tulisan Anda tetap ada di tangan Anda.\n\nPada layar berikutnya, pilih folder proyek hammer yang sudah ada atau buat yang baru. Anda dapat mengubahnya nanti di Pengaturan.
+	</string>
+	<string name="sandbox_picker_title">Pilih tempat untuk menyimpan proyek Hammer Anda</string>
+	<string name="sandbox_choose_folder_button">Pilih Folder</string>
+	<string name="sandbox_quit_button">Keluar</string>
+	<string name="sandbox_retry_message">Hammer memerlukan folder untuk menyimpan proyek Anda.\nPilih folder sekarang, atau keluar.
+	</string>
+
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="encyclopedia_header">Ensiklopedia</string>
+
+	<string name="encyclopedia_search_hint">Cari</string>
+	<string name="encyclopedia_search_clear_button">Bersihkan</string>
+
+	<string name="encyclopedia_category_person">Orang</string>
+	<string name="encyclopedia_category_place">Tempat</string>
+	<string name="encyclopedia_category_thing">Benda</string>
+	<string name="encyclopedia_category_event">Peristiwa</string>
+	<string name="encyclopedia_category_idea">Ide</string>
+
+	<string name="encyclopedia_browse_list_empty">Tidak Ada Entri Ditemukan</string>
+	<string name="encyclopedia_create_button">Buat Entri</string>
+	<string name="encyclopedia_create_entry_header">Buat entri</string>
+	<string name="encyclopedia_create_entry_section_marker">Baru</string>
+	<string name="encyclopedia_create_entry_draft_marker">Draft</string>
+	<string name="encyclopedia_create_entry_name_label">Nama</string>
+	<string name="encyclopedia_create_entry_name_placeholder">mis. Kucing Cheshire</string>
+	<string name="encyclopedia_create_entry_tags_label">Tag</string>
+	<string name="encyclopedia_create_entry_tags_hint">↵ untuk menambah</string>
+	<string name="encyclopedia_create_entry_tags_placeholder">ritual, magis, berulang…</string>
+	<string name="encyclopedia_create_entry_description_label">Deskripsi</string>
+	<string name="encyclopedia_create_entry_cover_art_label">Sampul</string>
+	<string name="encyclopedia_create_entry_image_drop_hint">Seret gambar · atau</string>
+	<string name="encyclopedia_create_entry_image_browse_button">Telusuri file</string>
+	<string name="encyclopedia_create_entry_image_attached">1 terlampir</string>
+	<string name="encyclopedia_create_entry_image_replace">Ganti</string>
+	<string name="encyclopedia_create_entry_image_too_large">Gambar terlalu besar. Ukuran maksimal %1$d MB.</string>
+	<string name="encyclopedia_create_entry_image_load_failed">Tidak dapat membaca gambar yang dipilih.</string>
+	<string name="encyclopedia_create_entry_create_button">Buat entri</string>
+	<string name="encyclopedia_create_entry_cancel_button">Batal</string>
+	<string name="encyclopedia_create_entry_toast_success">Entri Dibuat</string>
+	<string name="encyclopedia_create_entry_toast_too_long">Nama Entri terlalu panjang. Maks %1$d</string>
+	<string name="encyclopedia_create_entry_toast_invalid_name">Nama entri harus alfanumerik</string>
+	<string name="encyclopedia_create_entry_toast_tag_too_long">Tag terlalu panjang. Maks %1$d</string>
+	<string name="encyclopedia_create_entry_toast_alias_too_long">Alias terlalu panjang. Maks %1$d</string>
+	<string name="encyclopedia_entry_aliases_label">Alias</string>
+	<string name="encyclopedia_entry_add_alias_dialog_title">Tambah Alias</string>
+	<string name="encyclopedia_entry_add_alias_button">Tambah</string>
+	<string name="encyclopedia_entry_alias_hint">Nama panggilan atau nama lain</string>
+	<string name="encyclopedia_entry_appears_in_label">Muncul dalam adegan</string>
+	<string name="encyclopedia_entry_appears_in_empty">Belum dirujuk di adegan mana pun</string>
+	<string name="encyclopedia_create_entry_toast_name_too_short">Nama entri tidak boleh kosong</string>
+	<string name="encyclopedia_create_entry_discard_title">Buang Entri Baru?</string>
+	<string name="encyclopedia_entry_load_error">Kesalahan: Gagal memuat entri!</string>
+	<string name="encyclopedia_entry_body_empty_label">Klik untuk mengetik deskripsi</string>
+	<string name="encyclopedia_entry_edit_cancel_button">Batal</string>
+	<string name="encyclopedia_entry_edit_save_button">Simpan</string>
+	<string name="encyclopedia_entry_edit_save_toast">Entri Disimpan</string>
+	<string name="encyclopedia_entry_discard_title">Buang Perubahan?</string>
+	<string name="encyclopedia_entry_discard_message">Anda akan kehilangan semua perubahan yang telah Anda buat.
+	</string>
+	<string name="encyclopedia_entry_delete_title">Hapus Entri?</string>
+	<string name="encyclopedia_entry_delete_message">Tindakan ini tidak dapat dibatalkan!</string>
+	<string name="encyclopedia_entry_delete_toast">Entri Dihapus</string>
+	<string name="encyclopedia_entry_delete_image_title">Hapus Gambar?</string>
+	<string name="encyclopedia_entry_delete_image_message">Tindakan ini tidak dapat dibatalkan!</string>
+	<string name="encyclopedia_entry_name_hint">Nama</string>
+	<string name="encyclopedia_entry_close_button">Tutup Entri</string>
+	<string name="encyclopedia_entry_menu_group">Entri</string>
+	<string name="encyclopedia_entry_menu_delete">Hapus Entri</string>
+	<string name="encyclopedia_entry_menu_remove_image">Hapus Gambar</string>
+	<string name="encyclopedia_entry_menu_add_image">Tambah Gambar</string>
+	<string name="encyclopedia_entry_add_tags_dialog_title">Tambah Tag</string>
+	<string name="encyclopedia_entry_add_tags_button">Tambah Tag</string>
+
+	<string name="encyclopedia_entry_crumb_root">Ensiklopedia</string>
+	<string name="encyclopedia_entry_edit_button">Edit</string>
+	<string name="encyclopedia_entry_particulars_label">Rincian</string>
+	<string name="encyclopedia_entry_particulars_type">Jenis</string>
+	<string name="encyclopedia_entry_particulars_tags">Tag</string>
+	<string name="encyclopedia_entry_particulars_aliases">Alias</string>
+	<string name="encyclopedia_entry_particulars_scenes">Adegan</string>
+	<string name="encyclopedia_entry_tags_label">Tag</string>
+	<string name="encyclopedia_entry_add_tag_chip">tag</string>
+	<string name="encyclopedia_entry_add_alias_chip">alias</string>
+	<string name="encyclopedia_entry_figure_caption">Gbr. I · Entri</string>
+	<string name="encyclopedia_entry_figure_label">Gbr. I</string>
+	<string name="encyclopedia_entry_figure_add">+ Tambah</string>
+	<string name="encyclopedia_entry_folio_format">Fol. %1$s · Ent-%2$s</string>
+	<string name="encyclopedia_entry_scene_index_format">Ade.%1$s</string>
+	<string name="encyclopedia_entry_colophon_label">Entri · Kartu katalog</string>
+	<string name="encyclopedia_entry_colophon_label_compact">Diedit</string>
+	<string name="encyclopedia_entry_colophon_end">Akhir entri ✦</string>
+</resources>

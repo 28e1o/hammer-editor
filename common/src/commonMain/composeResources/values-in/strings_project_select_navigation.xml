@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="project_select_nav_projects_list">Proyek</string>
+	<string name="project_select_nav_account_settings">Pengaturan</string>
+	<string name="project_select_nav_about_app">Tentang</string>
+	<string name="project_select_nav_projects_list_short">PROY</string>
+	<string name="project_select_nav_account_settings_short">PENG</string>
+	<string name="project_select_nav_about_app_short">INFO</string>
+	<string name="project_libraries_dialog_title">Pustaka</string>
+</resources>

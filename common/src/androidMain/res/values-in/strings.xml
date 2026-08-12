@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="android_focus_mode_rule_name">Hammer Mode Fokus</string>
+	<string name="android_focus_mode_condition_active">Fokus Menulis Aktif</string>
+	<string name="android_focus_mode_condition_inactive">Fokus Nonaktif</string>
+</resources>

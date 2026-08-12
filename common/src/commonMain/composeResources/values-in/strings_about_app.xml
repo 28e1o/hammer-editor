@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="about_description">Alat sederhana untuk menyusun cerita.</string>
+
+	<string name="about_studio_header">Studio</string>
+	<string name="about_community_studio_attribution">Hammer dibuat oleh Dark Rock Studios, bersama keluarga aplikasi open source lain yang menghormati privasi Anda.</string>
+
+	<string name="about_community_header">Komunitas</string>
+	<string name="about_community_discord_link">Discord</string>
+	<string name="about_community_reddit_link">Reddit</string>
+	<string name="about_community_github_link">Github</string>
+
+	<string name="about_attribution_header">Atribusi</string>
+	<string name="about_attribution_libraries_button">Pustaka</string>
+	<string name="about_attribution_studio_button">Dark Rock Studios</string>
+
+	<string name="about_version_changes_button">Perubahan</string>
+	<string name="about_version_github_button">Rilis GitHub</string>
+
+	<string name="changelog_dialog_title">Apa yang Baru</string>
+	<string name="update_dialog_release_notes_section">Catatan rilis</string>
+	<string name="update_dialog_release_notes_empty">Tidak ada catatan rilis.</string>
+	<string name="update_dialog_open_release_button">Buka Rilis</string>
+
+	<string name="about_logs_header">Log Aplikasi</string>
+	<string name="about_logs_directory_label">Direktori Log:</string>
+	<string name="about_logs_export_button">Ekspor Log</string>
+	<string name="about_logs_no_logs">Tidak ada file log yang ditemukan</string>
+	<string name="about_logs_open_tooltip">Buka direktori log</string>
+</resources>

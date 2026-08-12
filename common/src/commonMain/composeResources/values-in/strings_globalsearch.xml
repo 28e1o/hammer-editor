@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="global_search_button">Cari proyek</string>
+	<string name="global_search_title">Cari proyek</string>
+	<string name="global_search_placeholder">Ketik untuk mencari, gunakan #tag untuk memfilter…</string>
+	<string name="global_search_clear">Bersihkan pencarian</string>
+	<string name="global_search_no_results">Tidak ada hasil</string>
+	<string name="global_search_too_short">Ketik minimal 2 karakter untuk mencari</string>
+	<string name="global_search_results_count">%1$d hasil</string>
+	<string name="global_search_source_scene">Adegan</string>
+	<string name="global_search_source_note">Catatan</string>
+	<string name="global_search_source_encyclopedia">Ensiklopedia</string>
+	<string name="global_search_source_timeline">Linimasa</string>
+	<string name="global_search_filter_all">Semua</string>
+	<string name="global_search_filter_scenes">Adegan</string>
+	<string name="global_search_filter_notes">Catatan</string>
+	<string name="global_search_filter_encyclopedia">Ensiklopedia</string>
+	<string name="global_search_filter_timeline">Linimasa</string>
+</resources>

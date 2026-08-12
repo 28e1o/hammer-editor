@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="project_home_stat_created">Dibuat: %1$s</string>
+	<string name="project_home_loading_stats">Menghitung statistik...</string>
+	<string name="project_home_refresh_stats_button">Muat ulang statistik</string>
+	<string name="project_home_stats_dirty_indicator">Statistik mungkin sudah kedaluwarsa</string>
+	<string name="project_home_stat_num_scenes">Adegan</string>
+	<string name="project_home_stat_total_words">Total Kata</string>
+	<string name="project_home_stat_encyclopedia_entries">Entri Ensiklopedia</string>
+
+	<string name="project_home_stat_chapter_words">Kata per Bab</string>
+	<string name="project_home_stat_chapter_words_x_axis">Bab</string>
+	<string name="project_home_stat_chapter_words_tooltip">%1$s: %2$s kata</string>
+
+	<string name="project_home_stat_avg_words_per_scene">Rata-rata Kata / Adegan</string>
+	<string name="project_home_stat_num_notes">Catatan</string>
+	<string name="project_home_stat_num_timeline_events">Peristiwa Linimasa</string>
+	<string name="project_home_stat_longest_scene">Adegan Terpanjang</string>
+	<string name="project_home_stat_longest_scene_words">%1$s kata</string>
+	<string name="project_home_stat_longest_scene_empty">Belum ada adegan</string>
+	<string name="project_home_stat_last_edited_scene">Terakhir Disunting</string>
+	<string name="project_home_stat_scene_median">Median</string>
+
+	<string name="project_home_stat_reading_time">≈ %1$d mnt membaca</string>
+	<string name="project_home_stat_pages">%1$d halaman</string>
+
+	<string name="project_home_stat_daily_goal">Target harian</string>
+	<string name="project_home_stat_weekly_goal">Target mingguan</string>
+
+	<string name="project_home_stat_this_week">Minggu ini</string>
+	<string name="project_home_stat_week_change_flat">tidak ada perubahan vs minggu lalu</string>
+	<string name="project_home_stat_week_change_new">tidak ada data minggu lalu</string>
+	<string name="project_home_stat_today">Hari ini</string>
+	<string name="project_home_stat_daily_avg">Rata-rata harian</string>
+
+	<string name="project_home_stat_streak">Rentetan</string>
+	<string name="project_home_stat_streak_days">%1$d hari</string>
+	<string name="project_home_stat_longest_streak">Terpanjang: %1$d</string>
+	<string name="project_home_stat_days_written">Hari menulis</string>
+	<string name="project_home_stat_best_day">Hari terbaik</string>
+	<string name="project_home_stat_best_day_value">%1$s · %2$s</string>
+
+	<string name="project_home_stat_characters_appearances">Tokoh berdasarkan Kemunculan</string>
+	<string name="project_home_stat_connections">%1$d koneksi</string>
+
+	<string name="project_home_stat_words_per_device">Kata per Perangkat</string>
+
+	<string name="project_home_stat_activity">Aktivitas · %1$d minggu</string>
+	<string name="project_home_stat_activity_tooltip">%1$s · %2$s kata</string>
+	<string name="project_home_stat_activity_tooltip_empty">%1$s · tidak ada tulisan</string>
+	<string name="project_home_stat_avg_weekday">Rata-rata hari kerja</string>
+	<string name="project_home_stat_avg_weekend">Rata-rata akhir pekan</string>
+
+	<string name="project_home_stat_chapter_words_summary">σ %1$d · min %2$d · maks %3$d</string>
+	<string name="project_home_stat_donut_entries">entri</string>
+	<string name="project_home_stat_donut_tooltip">%1$s · %2$s entri</string>
+
+	<string name="project_home_stat_themes_title">Tema</string>
+	<string name="project_home_stat_themes_summary">%1$d tag · %2$d penggunaan</string>
+	<string name="project_home_stat_themes_breadth">%1$d/4</string>
+	<string name="project_home_stat_themes_most_connective">Paling terhubung</string>
+	<string name="project_home_stat_themes_all_four">Muncul di keempat jenis · %1$d penggunaan</string>
+	<string name="project_home_stat_themes_breadth_of_four">Muncul di %1$d dari 4 jenis · %2$d penggunaan</string>
+	<string name="project_home_stat_themes_all_four_short">Semua 4 jenis</string>
+	<string name="project_home_stat_themes_breadth_of_four_short">%1$d dari 4 jenis</string>
+	<string name="project_home_stat_themes_distribution">Distribusi</string>
+	<string name="project_home_stat_themes_showing">Menampilkan %1$d dari %2$d</string>
+	<string name="project_home_stat_themes_columns_legend">Peringkat · Tag · Cakupan · Penggunaan</string>
+	<string name="project_home_stat_themes_source_scenes">Adegan</string>
+	<string name="project_home_stat_themes_source_notes">Catatan</string>
+	<string name="project_home_stat_themes_source_encyclopedia">Ensiklopedia</string>
+	<string name="project_home_stat_themes_source_events">Peristiwa</string>
+
+	<string name="project_home_action_export">Ekspor Cerita</string>
+	<string name="project_home_action_sync">Sinkronkan Cerita</string>
+	<string name="project_home_action_backup">Cadangan</string>
+	<string name="project_home_action_backup_toast_success">Cadangan Dibuat: %1$s</string>
+	<string name="project_home_action_backup_toast_failure">Cadangan Gagal</string>
+
+	<string name="project_home_action_export_toast_success">Cerita Diekspor</string>
+	<string name="project_home_action_export_toast_failure">Ekspor gagal</string>
+
+	<string name="project_home_export_dialog_title">Ekspor Cerita</string>
+	<string name="project_home_export_section">EKSPOR</string>
+	<string name="project_home_export_close">× TUTUP</string>
+	<string name="project_home_export_chapters_label">Perlakukan adegan tingkat atas sebagai bab</string>
+	<string name="project_home_export_format_label">Format</string>
+	<string name="project_home_export_format_markdown">Markdown (.md)</string>
+	<string name="project_home_export_format_epub">EPub (.epub)</string>
+	<string name="project_home_export_format_pdf">PDF (.pdf)</string>
+	<string name="project_home_export_format_docx">Word (.docx)</string>
+	<string name="project_home_export_format_rtf">RTF (.rtf)</string>
+	<string name="project_home_export_cancel">Batal</string>
+	<string name="project_home_export_execute">Ekspor</string>
+
+	<string name="project_home_export_help_icon_description">Pelajari tentang format ekspor</string>
+	<string name="project_home_export_help_title">Memilih Format Ekspor</string>
+	<string name="project_home_export_help_intro">Setiap format cocok untuk tujuan yang berbeda. Pilih salah satu yang sesuai dengan rencana penggunaan cerita hasil ekspor Anda.</string>
+	<string name="project_home_export_help_format_markdown">Teks biasa dengan format ringan; ideal untuk kontrol versi, impor ulang, atau perkakas menulis lainnya.</string>
+	<string name="project_home_export_help_format_epub">Format e-book standar; paling baik untuk pembaca beta yang membaca di e-reader dan ponsel dengan teks yang dapat mengalir ulang.</string>
+	<string name="project_home_export_help_format_pdf">Tata letak halaman tetap yang tampak sama di mana pun; paling baik untuk mencetak atau membagikan salinan final hanya-baca.</string>
+	<string name="project_home_export_help_format_docx">Terbuka di Word dan Google Docs; paling baik untuk penyunting dan pembaca beta yang memberi komentar atau melacak perubahan.</string>
+	<string name="project_home_export_help_format_rtf">Format teks kaya yang kompatibel luas; pilihan aman saat Anda tidak yakin pengolah kata apa yang digunakan penerima.</string>
+	<string name="project_home_export_help_dismiss">Paham</string>
+
+	<string name="project_home_export_contents_title">Daftar Isi</string>
+	<string name="project_home_export_byline">oleh %1$s</string>
+
+	<string name="project_home_action_import_toast_success">Cerita Diimpor</string>
+	<string name="project_home_action_import_toast_failure">Impor gagal</string>
+	<string name="project_home_import_dialog_title">Impor Cerita</string>
+	<string name="project_home_import_heading_label">Deteksi bab</string>
+	<string name="project_home_import_heading_auto">Otomatis</string>
+	<string name="project_home_import_heading_h1">H1 (#)</string>
+	<string name="project_home_import_heading_h2">H2 (##)</string>
+	<string name="project_home_import_split_label">Pisahkan menjadi adegan</string>
+	<string name="project_home_import_split_formatting">Format</string>
+	<string name="project_home_import_split_pattern">Pola</string>
+	<string name="project_home_import_split_single">Adegan tunggal</string>
+	<string name="project_home_import_pattern_label">Pola bab (regex)</string>
+	<string name="project_home_import_create_groups_label">Buat kelompok bab</string>
+	<string name="project_home_import_preview_label">Pratinjau</string>
+	<string name="project_home_import_preview_empty">Tidak ada yang bisa diimpor</string>
+	<string name="project_home_import_preview_reading">Membaca naskah Anda</string>
+	<string name="project_home_import_preview_count">Akan membuat %1$d adegan</string>
+	<string name="project_home_import_large_scene_label">Adegan besar</string>
+	<string name="project_home_import_large_scene_one">Satu adegan memuat %1$s kata, jadi deteksi bab kemungkinan melewatkan judul bab Anda. Coba pengaturan deteksi lain.</string>
+	<string name="project_home_import_large_scene_many">%1$d adegan memuat %2$s kata atau lebih, jadi deteksi bab kemungkinan melewatkan sebagian judul bab. Coba pengaturan deteksi lain.</string>
+	<string name="project_home_import_scene_word_count">%1$s K</string>
+	<string name="project_home_import_cancel">Batal</string>
+	<string name="project_home_import_execute">Impor</string>
+
+	<string name="project_home_action_settings_button">Pengaturan</string>
+
+	<string name="project_home_menu_button">Menu proyek</string>
+</resources>

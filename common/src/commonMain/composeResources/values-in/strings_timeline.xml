@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="timeline_no_events">Tidak Ada Peristiwa</string>
+	<string name="timeline_create_event_button">Buat Peristiwa</string>
+
+	<string name="timeline_create_toast_success">Peristiwa Dibuat</string>
+	<string name="timeline_create_toast_tag_too_long">Tag terlalu panjang (maks %1$d)</string>
+	<string name="timeline_create_tags_label">Tag</string>
+	<string name="timeline_create_tags_hint">↵ untuk menambah</string>
+	<string name="timeline_create_tags_placeholder">alur, bayangan, konflik…</string>
+
+	<string name="timeline_view_header">Peristiwa</string>
+	<string name="timeline_view_label_editing">Menyunting</string>
+	<string name="timeline_view_crumb_root">Linimasa</string>
+	<string name="timeline_view_save_button">Simpan</string>
+	<string name="timeline_view_cancel_button">Batal</string>
+	<string name="timeline_view_edit_button">Edit</string>
+	<string name="timeline_view_close_button">Tutup Entri</string>
+	<string name="timeline_view_date_label">Tanggal</string>
+	<string name="timeline_view_date_hint">opsional</string>
+	<string name="timeline_view_date_placeholder">mis. Musim Semi Y3</string>
+	<string name="timeline_view_undated">TANPA TANGGAL</string>
+	<string name="timeline_view_status_unsaved">BELUM TERSIMPAN</string>
+	<string name="timeline_view_status_word_char">%1$d K · %2$d KR</string>
+	<string name="timeline_view_status_hint">ESC UNTUK BATAL</string>
+	<string name="timeline_view_word_count_short">%1$d K</string>
+	<string name="timeline_view_tag_count_short">%1$d TAG</string>
+	<string name="timeline_view_toast_save_success">Tersimpan</string>
+	<string name="timeline_view_toast_save_failure">Gagal menyimpan</string>
+	<string name="timeline_create_header">Buat Peristiwa</string>
+	<string name="timeline_create_marker">III · BARU</string>
+	<string name="timeline_create_draft_label">DRAFT</string>
+	<string name="timeline_create_word_count">%1$d K · %2$d KR</string>
+	<string name="timeline_create_cancel_button">Batal</string>
+	<string name="timeline_create_create_button">Buat</string>
+	<string name="timeline_create_date_hint">opsional</string>
+	<string name="timeline_create_date_placeholder">mis. Musim Semi Y3</string>
+
+	<string name="timeline_view_discard_title">Buang Perubahan?</string>
+	<string name="timeline_view_discard_message">Anda akan kehilangan semua perubahan yang telah Anda buat.</string>
+
+	<string name="timeline_view_menu_group">Peristiwa</string>
+	<string name="timeline_view_menu_delete">Hapus</string>
+
+	<string name="timeline_view_confirm_delete_title">Hapus Peristiwa Linimasa?</string>
+	<string name="timeline_view_confirm_delete_message">Tindakan ini tidak dapat dibatalkan!</string>
+
+	<string name="timeline_header">Linimasa</string>
+	<string name="timeline_header_meta">%1$d ENTRI · %2$d TAG</string>
+	<string name="timeline_search_button">Cari linimasa</string>
+	<string name="timeline_search_placeholder">Cari linimasa</string>
+	<string name="timeline_search_close">Tutup pencarian</string>
+	<string name="timeline_search_clear">Bersihkan pencarian</string>
+	<string name="timeline_filter_all">SEMUA</string>
+	<string name="timeline_filter_filtered">TERFILTER · %1$d DARI %2$d</string>
+	<string name="timeline_filter_clear_all">BERSIHKAN SEMUA</string>
+</resources>

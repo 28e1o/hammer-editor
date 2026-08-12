@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="notes_header">Catatan</string>
+	<string name="notes_list_empty">Tidak Ada Catatan Ditemukan</string>
+	<string name="notes_create_note_button">Buat Catatan</string>
+	<string name="notes_note_item_action_cancel">Batal</string>
+	<string name="notes_discard_dialog_title">Buang Perubahan?</string>
+	<string name="notes_discard_dialog_message">Anda akan kehilangan semua perubahan yang telah Anda buat.</string>
+	<string name="notes_create_header">Buat Catatan</string>
+	<string name="notes_create_marker">III · BARU</string>
+	<string name="notes_create_draft_label">DRAFT</string>
+	<string name="notes_create_create_button">Buat</string>
+	<string name="notes_create_cancel_button">Batal</string>
+	<string name="notes_create_toast_success">Catatan Dibuat</string>
+	<string name="notes_create_toast_too_long">Catatan terlalu panjang</string>
+	<string name="notes_create_toast_empty">Catatan kosong</string>
+	<string name="notes_create_toast_tag_too_long">Tag terlalu panjang (maks %1$d)</string>
+	<string name="notes_create_tags_label">Tag</string>
+	<string name="notes_create_tags_hint">↵ untuk menambah</string>
+	<string name="notes_create_tags_placeholder">ide, tugas, tindak lanjut…</string>
+	<string name="notes_delete_title">Hapus Catatan?</string>
+	<string name="notes_delete_message">Tindakan ini tidak dapat dibatalkan!</string>
+	<string name="notes_delete_toast_success">Catatan Dihapus</string>
+
+	<string name="notes_menu_group">Catatan</string>
+	<string name="notes_menu_delete">Hapus</string>
+
+	<string name="notes_view_header">Catatan</string>
+	<string name="notes_view_label_editing">Menyunting</string>
+	<string name="notes_view_close_button">Tutup Catatan</string>
+	<string name="notes_view_crumb_root">Catatan</string>
+	<string name="notes_view_action_edit">Edit</string>
+	<string name="notes_view_action_save">Simpan</string>
+	<string name="notes_view_status_unsaved">BELUM TERSIMPAN</string>
+	<string name="notes_view_status_word_char">%1$d K · %2$d KR</string>
+	<string name="notes_view_status_hint">ESC UNTUK BATAL</string>
+
+	<string name="notes_search_button">Cari catatan</string>
+	<string name="notes_search_placeholder">Cari catatan</string>
+	<string name="notes_search_close">Tutup pencarian</string>
+	<string name="notes_search_clear">Bersihkan pencarian</string>
+
+	<string name="notes_header_meta">%1$d CATATAN · %2$d TAG</string>
+	<string name="notes_word_count_short">%1$d K</string>
+	<string name="notes_filter_all">SEMUA</string>
+	<string name="notes_filter_filtered">TERFILTER · %1$d DARI %2$d</string>
+	<string name="notes_filter_clear_all">BERSIHKAN SEMUA</string>
+	<string name="notes_sort_label">URUTKAN</string>
+	<string name="notes_sort_newest">Terbaru</string>
+	<string name="notes_sort_oldest">Terlama</string>
+	<string name="notes_sort_longest">Terpanjang</string>
+	<string name="notes_sort_shortest">Terpendek</string>
+	<string name="notes_sort_title_az">Judul A–Z</string>
+	<string name="notes_sort_glyph_date_desc">↓ TANGGAL</string>
+	<string name="notes_sort_glyph_date_asc">↑ TANGGAL</string>
+	<string name="notes_sort_glyph_words_desc">↓ KATA</string>
+	<string name="notes_sort_glyph_words_asc">↑ KATA</string>
+	<string name="notes_sort_glyph_title_az">↓ A–Z</string>
+</resources>

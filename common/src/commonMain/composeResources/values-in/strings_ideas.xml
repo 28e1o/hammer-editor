@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="project_select_nav_story_ideas">Ide Cerita</string>
+	<string name="project_select_nav_story_ideas_short">IDE</string>
+
+	<string name="ideas_header">Ide Cerita</string>
+	<string name="ideas_header_meta">%1$d IDE · %2$d TAG</string>
+	<string name="ideas_list_empty">Belum ada ide cerita. Tangkap percikan ide pertamamu.</string>
+	<string name="ideas_list_empty_archived">Tidak ada ide yang diarsipkan.</string>
+	<string name="ideas_word_count_short">%1$d K</string>
+	<string name="ideas_tag_count_short">%1$d TAG</string>
+
+	<string name="ideas_search_placeholder">Cari ide</string>
+	<string name="ideas_search_button">Cari ide</string>
+	<string name="ideas_search_clear">Bersihkan pencarian</string>
+	<string name="ideas_search_close">Tutup pencarian</string>
+
+	<string name="ideas_filter_all">Semua</string>
+	<string name="ideas_filter_archived">Diarsipkan</string>
+	<string name="ideas_filter_filtered">TERFILTER %1$d / %2$d</string>
+	<string name="ideas_filter_clear_all">Bersihkan Semua</string>
+
+	<string name="ideas_sort_label">URUTKAN</string>
+	<string name="ideas_sort_newest">Terbaru</string>
+	<string name="ideas_sort_oldest">Terlama</string>
+	<string name="ideas_sort_title_az">Judul A–Z</string>
+	<string name="ideas_sort_glyph_date_desc">↓ TANGGAL</string>
+	<string name="ideas_sort_glyph_date_asc">↑ TANGGAL</string>
+	<string name="ideas_sort_glyph_title_az">↓ A–Z</string>
+
+	<string name="ideas_stamp_promoted">DIPROMOSIKAN · %1$s</string>
+	<string name="ideas_stamp_archived">DIARSIPKAN · %1$s</string>
+
+	<string name="ideas_create_fab">Tangkap ide baru</string>
+	<string name="ideas_create_marker">Ide Baru</string>
+	<string name="ideas_view_header">Ide Cerita</string>
+	<string name="ideas_view_label_editing">Menyunting</string>
+	<string name="ideas_view_status_unsaved">BELUM TERSIMPAN</string>
+	<string name="ideas_view_crumb_root">IDE CERITA</string>
+	<string name="ideas_view_close_button">Tutup ide</string>
+	<string name="ideas_view_action_edit">Edit</string>
+	<string name="ideas_title_label">Judul</string>
+	<string name="ideas_title_placeholder">Judul opsional</string>
+	<string name="ideas_tags_label">Tag</string>
+	<string name="ideas_tags_hint">Enter atau tanda koma menambah tag</string>
+	<string name="ideas_tags_placeholder">Tambah tag…</string>
+	<string name="ideas_editor_counter">%1$d / %2$d KR</string>
+	<string name="ideas_create_button">Buat</string>
+	<string name="ideas_save_button">Simpan</string>
+	<string name="ideas_cancel_button">Batal</string>
+	<string name="ideas_delete_button">Hapus</string>
+	<string name="ideas_archive_button">Arsipkan</string>
+	<string name="ideas_unarchive_button">Batal Arsip</string>
+
+	<string name="ideas_toast_created">Ide ditangkap</string>
+	<string name="ideas_toast_saved">Ide disimpan</string>
+	<string name="ideas_toast_deleted">Ide dihapus</string>
+	<string name="ideas_toast_archived">Ide diarsipkan</string>
+	<string name="ideas_toast_unarchived">Arsip ide dibatalkan</string>
+	<string name="ideas_toast_empty">Ide tidak boleh kosong</string>
+	<string name="ideas_toast_too_long">Ide terlalu panjang: maks %1$d karakter</string>
+	<string name="ideas_toast_tag_too_long">Tag maksimal %1$d karakter</string>
+
+	<string name="ideas_promote_button">Buat Proyek</string>
+	<string name="ideas_promote_dialog_title">Buat Proyek dari Ide</string>
+	<string name="ideas_promote_dialog_message">Sebuah proyek baru akan dibuat dan ide ini akan ditambahkan ke dalamnya sebagai catatan pertamanya.</string>
+	<string name="ideas_toast_promoted">Proyek dibuat: %1$s</string>
+	<string name="ideas_toast_promote_failed">Gagal membuat proyek</string>
+
+	<string name="ideas_delete_dialog_title">Hapus Ide</string>
+	<string name="ideas_delete_dialog_message">Ide ini akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.</string>
+	<string name="ideas_discard_dialog_title">Buang Perubahan</string>
+	<string name="ideas_discard_dialog_message">Anda memiliki perubahan yang belum disimpan. Buang perubahan tersebut?</string>
+
+	<string name="sync_log_ideas_begin">Menyinkronkan ide cerita</string>
+	<string name="sync_log_ideas_unchanged">Ide cerita tidak berubah — dilewati</string>
+	<string name="sync_log_ideas_complete">Sinkronisasi ide cerita selesai</string>
+	<string name="sync_log_ideas_state_failed">Gagal mengambil status ide cerita: %1$s</string>
+	<string name="sync_log_ideas_deleted_local">Menghapus ide yang terhapus: %1$s</string>
+	<string name="sync_log_ideas_deleted_server">Meneruskan penghapusan ide ke server: %1$s</string>
+	<string name="sync_log_ideas_delete_server_failed">Gagal menghapus ide di server: %1$s</string>
+	<string name="sync_log_ideas_uploaded">Ide diunggah: %1$s</string>
+	<string name="sync_log_ideas_upload_failed">Gagal mengunggah ide "%1$s": %2$s</string>
+	<string name="sync_log_ideas_downloaded">Ide diunduh: %1$s</string>
+	<string name="sync_log_ideas_download_failed">Gagal mengunduh ide %1$s: %2$s</string>
+	<string name="sync_log_ideas_conflict">Konflik terdeteksi untuk ide: %1$s</string>
+	<string name="sync_log_ideas_conflict_resolved">Konflik diselesaikan untuk ide: %1$s</string>
+	<string name="sync_log_ideas_conflict_skipped">Konflik tidak diselesaikan untuk ide: %1$s</string>
+
+	<string name="ideas_conflict_title">Konflik Ide Cerita</string>
+	<string name="ideas_conflict_field_title">Judul</string>
+	<string name="ideas_conflict_field_tags">Tag</string>
+	<string name="ideas_conflict_field_content">Konten</string>
+</resources>

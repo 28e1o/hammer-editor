@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="sync_project_dialog_title">Sinkronisasi Proyek</string>
+
+	<string name="sync_conflict_scene_title">Konflik Adegan</string>
+	<string name="sync_conflict_scene_draft_title">Konflik Draft Adegan</string>
+	<string name="sync_conflict_note_title">Konflik Catatan</string>
+	<string name="sync_conflict_timeline_title">Konflik Peristiwa Linimasa</string>
+
+	<string name="sync_conflict_timeline_event_missing_date">Tanpa Tanggal</string>
+
+	<string name="sync_conflict_tab_local">Lokal</string>
+	<string name="sync_conflict_tab_remote">Jarak Jauh</string>
+
+	<string name="sync_conflict_header_title">Konflik %1$s</string>
+	<string name="sync_conflict_entity_label_scene">Adegan</string>
+	<string name="sync_conflict_entity_label_note">Catatan</string>
+	<string name="sync_conflict_entity_label_timeline_event">Peristiwa Linimasa</string>
+	<string name="sync_conflict_entity_label_encyclopedia_entry">Entri Ensiklopedia</string>
+	<string name="sync_conflict_entity_label_scene_draft">Draft Adegan</string>
+	<string name="sync_conflict_entity_label_project_data">Pengaturan Proyek</string>
+
+
+	<string
+		name="sync_conflict_merge_explained">Anda dapat mengambil salinan lokal atau jarak jauh apa adanya, atau Anda dapat menggabungkan keduanya secara manual dengan menyalin bagian dari salinan jarak jauh ke salinan lokal Anda, lalu mengambil hasilnya.
+	</string>
+
+
+	<string name="sync_conflict_encyclopedia_title">Konflik Entri Ensiklopedia</string>
+
+	<string name="project_info_author_label">Penulis</string>
+	<string name="project_info_theme_section_title">Tema khusus</string>
+	<string name="project_info_theme_enable_label">Gunakan tema khusus untuk proyek ini</string>
+	<string name="project_info_theme_primary_label">Primer</string>
+	<string name="project_info_theme_secondary_label">Sekunder</string>
+	<string name="project_info_word_goal_section_title">Target jumlah kata</string>
+	<string name="project_info_word_goal_enable_label">Lacak target menulis</string>
+	<string name="project_info_word_goal_count_label">Kata</string>
+	<string name="project_info_word_goal_cadence_label">Per</string>
+	<string name="project_info_word_goal_cadence_day">Hari</string>
+	<string name="project_info_word_goal_cadence_week">Minggu</string>
+	<string name="project_info_word_goal_effective_label">Efektif</string>
+	<string name="project_info_word_goal_effective_unit">K / hari</string>
+	<string name="project_info_tags_section_title">Tag</string>
+	<string name="project_info_tags_label">Tag</string>
+	<string name="project_info_tags_hint">↵ untuk menambah</string>
+	<string name="project_info_tags_placeholder">fantasi, draf, nanowrimo…</string>
+	<string name="project_info_language_label">Bahasa</string>
+	<string name="project_info_language_unset">Belum diatur</string>
+	<string name="project_info_language_dialog_title">Pilih bahasa</string>
+	<string name="project_info_language_dialog_close">Tutup</string>
+	<string name="project_info_language_search_hint">Cari bahasa</string>
+	<string name="project_info_language_clear">Bersihkan (tidak diatur)</string>
+	<string name="project_info_language_empty">Tidak ada bahasa yang cocok</string>
+	<string name="project_info_color_picker_edit">Edit</string>
+	<string name="project_info_color_picker_cancel">Batal</string>
+	<string name="project_info_color_picker_confirm">OK</string>
+	<string name="project_settings_breadcrumb_home">Beranda</string>
+	<string name="project_settings_breadcrumb_root">Pengaturan Proyek</string>
+	<string name="project_settings_autosaved">Tersimpan Otomatis</string>
+	<string name="project_settings_hero_marker">§ 0 · Proyek</string>
+	<string name="project_settings_hero_by">oleh %1$s</string>
+	<string name="project_settings_hero_no_author">oleh (penulis belum diatur)</string>
+	<string name="project_settings_spellcheck_section_title">Pemeriksaan ejaan</string>
+	<string name="project_settings_spellcheck_mismatch_caption">Pemeriksaan ejaan mati: bahasa proyek (%1$s) tidak cocok dengan kamus Anda (%2$s). Ubah salah satunya untuk mengaktifkannya kembali.</string>
+	<string name="project_settings_folio_caption">Pengaturan Proyek · %1$s</string>
+	<string name="project_settings_folio_section_count">§§ %1$d</string>
+
+	<string name="sync_conflict_project_data_title">Konflik Pengaturan Proyek</string>
+	<string name="sync_conflict_project_data_explanation">Pilih satu sisi untuk setiap kolom. Lokal adalah apa yang Anda miliki di perangkat ini; Server adalah apa yang disinkronkan dari perangkat lain.</string>
+	<string name="sync_conflict_project_data_field_author">Nama Penulis</string>
+	<string name="sync_conflict_project_data_field_theme">Tema Proyek</string>
+	<string name="sync_conflict_project_data_field_word_goal">Target Jumlah Kata</string>
+	<string name="sync_conflict_project_data_field_tags">Tag</string>
+	<string name="sync_conflict_project_data_field_language">Bahasa</string>
+	<string name="sync_conflict_project_data_value_unset">(tidak diatur)</string>
+	<string name="sync_conflict_project_data_cadence_day">hari</string>
+	<string name="sync_conflict_project_data_cadence_week">minggu</string>
+	<string name="sync_conflict_project_data_resolve_button">Selesaikan</string>
+
+
+	<string name="sync_conflict_encyclopedia_label_name">Nama:</string>
+	<string name="sync_conflict_encyclopedia_label_type">Jenis:</string>
+	<string name="sync_conflict_encyclopedia_label_image">Gambar:</string>
+	<string name="sync_conflict_encyclopedia_label_content">Konten:</string>
+	<string name="sync_conflict_encyclopedia_label_tags">Tag:</string>
+
+	<string name="sync_conflict_encyclopedia_has_image">Memiliki Gambar</string>
+
+	<string name="sync_conflict_title_scene_field_name">Nama</string>
+	<string name="sync_conflict_title_scene_field_content">Konten Adegan</string>
+	<string name="sync_conflict_title_scene_field_outline">Garis Besar</string>
+	<string name="sync_conflict_title_scene_field_notes">Catatan</string>
+	<string name="sync_conflict_scene_tab_content">Konten</string>
+	<string name="sync_conflict_scene_tab_metadata">Metadata</string>
+	<string name="sync_conflict_scene_tab_references">Referensi</string>
+	<string name="sync_conflict_references_confirmed_label">Dikonfirmasi</string>
+	<string name="sync_conflict_references_dismissed_label">Dikesampingkan</string>
+	<string name="sync_conflict_references_empty">Tidak ada</string>
+	<string name="sync_conflict_encyclopedia_label_aliases">Alias:</string>
+
+	<string name="sync_conflict_title_scene_draft_field_name">Nama</string>
+	<string name="sync_conflict_title_scene_draft_field_content">Konten Adegan</string>
+
+	<string name="sync_conflict_title_note_field_name">Konten Catatan</string>
+
+	<string name="sync_conflict_title_timeline_event_field_date">Tanggal</string>
+	<string name="sync_conflict_title_timeline_event_field_content">Konten Peristiwa</string>
+
+	<string name="sync_menu_group">Sinkron</string>
+	<string name="sync_menu_item">Mulai Sinkron</string>
+
+	<string name="sync_status_in_progress">Menyinkronkan...</string>
+	<string name="sync_status_failed">Sinkronisasi Gagal</string>
+	<string name="sync_status_success">Sinkronisasi Selesai</string>
+
+
+	<string name="sync_toast_success">Sinkronisasi Proyek Selesai</string>
+	<string name="sync_toast_failed">Sinkronisasi Proyek Gagal</string>
+
+	<string name="sync_log_account_begin">Mulai Sinkron</string>
+	<string name="sync_log_account_server_data_loaded">Data server dimuat</string>
+	<string name="sync_log_account_complete">Sinkronisasi Akun selesai</string>
+	<string name="sync_log_account_failed">Gagal menyinkronkan proyek: %1$s</string>
+	<string name="sync_log_account_project_delete_server_success">Menghapus proyek server:
+		ID(%1$s)
+	</string>
+	<string name="sync_log_account_project_delete_server_failure">Gagal menghapus proyek di server: %1$s</string>
+	<string name="sync_log_account_project_delete_client">Menghapus proyek lokal: %1$s</string>
+
+	<string name="sync_log_account_project_rename_server_success">Mengganti nama proyek server:
+		ID(%1$s)
+	</string>
+	<string name="sync_log_account_project_rename_server_failure">Gagal mengganti nama proyek di
+		server: %1$s
+	</string>
+
+	<string name="sync_log_account_project_rename_client_from_server_success">Ganti nama proyek dari
+		server: %1$s
+	</string>
+	<string name="sync_log_account_project_rename_client_from_server_failure">Gagal mengganti nama
+		proyek dari server: %1$s
+	</string>
+
+	<string name="sync_log_account_project_create_server_success">Proyek dibuat di server: %1$s</string>
+	<string name="sync_log_account_project_create_server_failure">Gagal membuat proyek di server: %1$s</string>
+	<string name="sync_log_account_project_create_client">Proyek lokal dibuat: %1$s</string>
+	<string name="sync_log_account_project_create_client_local">Mengatur ID Server proyek lokal:
+		%1$s
+	</string>
+	<string name="sync_log_account_project_create_client_failure">Gagal membuat proyek server:
+		%1$s
+	</string>
+
+	<string name="sync_log_begin_account">Menyinkronkan Akun...</string>
+	<string name="sync_log_begin_projects">Menyinkronkan Proyek...</string>
+	<string name="sync_log_end_projects">Sinkronisasi Proyek Selesai</string>
+	<string name="sync_log_begin_project">Menyinkronkan Proyek: %1$s</string>
+
+	<string
+		name="sync_log_project_conflict">Ada konflik di proyek: %1$s, buka proyek itu dan sinkronkan untuk menyelesaikannya
+	</string>
+
+	<string name="sync_log_client_data_computed">Data Entitas Klien dihitung</string>
+	<string name="sync_log_project_id_stale">Server tidak lagi memiliki proyek ini. Proyek ini akan dibuat ulang saat Anda menyinkronkan berikutnya.</string>
+	<string name="sync_log_server_data_loaded">Data server diterima</string>
+	<string name="sync_log_client_data_loaded">Data klien dimuat</string>
+	<string name="sync_log_backup_made">Cadangan Lokal dibuat: %1$s</string>
+	<string name="sync_log_entity_download_success">Entitas %1$d diunduh</string>
+	<string name="sync_log_entity_download_failed_general">Gagal mengunduh entitas %1$d</string>
+	<string name="sync_log_entity_download_failed_not_found">Entitas %1$d tidak ditemukan di server</string>
+	<string name="sync_log_entity_download_not_modified">Entitas %1$d tidak berubah</string>
+	<string name="sync_log_entity_download_rejected_mismatch">Unduhan ditolak untuk entitas %1$d: server mengembalikan id atau jenis yang tidak cocok</string>
+	<string name="sync_log_entity_upload_entity_not_owned">Gagal mengunggah entitas %1$d: jenis tidak dimiliki apa pun, kemungkinan sudah dihapus</string>
+	<string name="sync_log_entity_delete_failed">Gagal menghapus ID %1$d di server: %2$s</string>
+	<string name="sync_log_entity_delete_success">ID %1$d dihapus di server</string>
+	<string
+		name="sync_log_entity_conflict">Menemukan konflik untuk Entitas baru, seharusnya ini tidak mungkin! ID: %1$d JENIS: %2$s
+	</string>
+	<string name="sync_log_entity_failed">Sinkronisasi gagal: %1$s</string>
+	<string name="sync_log_stale_hash_detected">Hash cache server basi untuk entitas %1$d. Memperbaiki dengan unggahan paksa.</string>
+	<string name="sync_log_stale_hash_healed">Berhasil memperbaiki cache server untuk entitas %1$d melalui unggahan paksa</string>
+	<string name="sync_log_stale_hash_heal_failed">Gagal memperbaiki cache server untuk entitas %1$d - unggahan paksa gagal</string>
+	<string name="sync_log_entities_transferred">Entitas ditransfer</string>
+	<string name="sync_log_finalized">Sinkronisasi diselesaikan</string>
+	<string name="sync_log_data_saved">Data sinkronisasi disimpan</string>
+	<string name="sync_log_data_save_failed">Data sinkronisasi tidak disimpan karena ada kesalahan</string>
+	<string name="sync_log_failed">Gagal mengakhiri sinkronisasi</string>
+
+	<string name="sync_draft_rejected_invalid_name">Menolak draft %1$d dari server: nama draft tidak aman</string>
+	<string name="sync_encyclopedia_image_rejected_invalid_extension">Melewati gambar untuk entri ensiklopedia %1$d dari server: ekstensi file tidak aman</string>
+
+	<string name="sync_encyclopedia_deleted">Menghapus Ensiklopedia ID %1$d dari klien</string>
+	<string name="sync_note_deleted">Menghapus catatan ID %1$d dari klien</string>
+	<string name="sync_draft_deleted">Menghapus draft %1$d dari klien</string>
+	<string name="sync_scene_deleted">Menghapus adegan %1$d dari klien</string>
+	<string name="sync_scene_delete_failed">Gagal menghapus adegan %1$d dari klien</string>
+	<string name="sync_scene_delete_failed_not_found">Gagal menemukan adegan yang akan dihapus: %1$d</string>
+	<string name="sync_event_deleted">Menghapus peristiwa %1$d dari klien</string>
+	<string name="sync_event_delete_failed">Gagal menghapus peristiwa %1$d dari klien</string>
+	<string name="sync_event_delete_failed_not_found">Gagal menemukan peristiwa yang akan dihapus: %1$d</string>
+
+	<string name="sync_scene_creating">Membuat adegan baru %1$d</string>
+	<string name="sync_scene_downloading">Mengunduh konten adegan untuk: %1$d</string>
+	<string name="sync_scene_moved_parent">Memindahkan adegan %1$d ke induk baru %2$d</string>
+	<string name="sync_scene_store_content_failed">Gagal menyimpan konten adegan yang diunduh untuk: %1$d</string>
+
+	<string name="sync_scene_group_creating">Membuat grup baru %1$d</string>
+	<string name="sync_scene_group_downloading">Mengunduh konten adegan untuk: %1$d</string>
+	<string name="sync_scene_group_moved_parent">Memindahkan adegan %1$d ke induk baru %2$d</string>
+
+	<string name="sync_unauthorized">Tidak Diizinkan</string>
+	<string name="sync_general_error">Kesalahan server yang tidak tertangani</string>
+
+	<string name="protocol_mismatch_section">PEMBARUAN DIPERLUKAN</string>
+	<string name="protocol_mismatch_title_client">Aplikasi Anda sudah kedaluwarsa</string>
+	<string name="protocol_mismatch_title_server">Server sinkronisasi sudah kedaluwarsa</string>
+	<string name="protocol_mismatch_body_client">Versi Hammer ini tidak dapat lagi menyinkronkan dengan server. Perbarui ke versi terbaru agar terus menyinkronkan pekerjaan Anda.</string>
+	<string name="protocol_mismatch_body_server">Server sinkronisasi menjalankan protokol yang lebih lama daripada aplikasi ini. Server perlu diperbarui sebelum sinkronisasi dapat berfungsi kembali.</string>
+	<string name="protocol_mismatch_latest_version">Versi terbaru: %s</string>
+	<string name="protocol_mismatch_current_version">Anda memiliki: %s</string>
+	<string name="protocol_mismatch_open_release_button">Dapatkan Pembaruan</string>
+	<string name="protocol_mismatch_dismiss_button">Tutup</string>
+
+	<string name="reauth_title">Otorisasi Ulang</string>
+	<string name="reauth_explanation">Token Anda telah kedaluwarsa, harap otorisasi ulang dengan server sinkronisasi Anda.</string>
+	<string name="reauth_token_expired">Token Kedaluwarsa</string>
+	<string name="reauth_server_url">Alamat</string>
+	<string name="reauth_server_email">E-Mail</string>
+
+	<string name="server_setup_help_title">Tentang Server Sinkronisasi</string>
+	<string
+		name="server_setup_help_intro">Server Sinkronisasi untuk Hammer memungkinkan Anda mengerjakan proyek dari beberapa perangkat. Server akan menyinkronkan pekerjaan Anda ke perangkat mana pun yang Anda konfigurasi dengan server yang sama.
+	</string>
+	<string name="server_setup_help_official_header">Server Resmi</string>
+	<string
+		name="server_setup_help_official_body">Anda dapat menjalankan server Sinkron sendiri, tetapi jika itu terlalu teknis, atau Anda hanya ingin mendukung proyek ini, kami menjalankan server resmi di hammer.ink.
+	</string>
+	<string
+		name="server_setup_help_patreon">Jika Anda berlangganan Patreon kami, Anda mendapatkan akses ke server resmi. Ini adalah cara terbaik untuk mendukung proyek ini.
+	</string>
+	<string name="server_setup_help_patreon_link">Patreon</string>
+	<string name="server_setup_help_hammer_link">Hammer.Ink</string>
+	<string name="server_setup_help_registration_header">Pendaftaran</string>
+	<string
+		name="server_setup_help_registration_body">Server memiliki pendaftaran tertutup, artinya admin server perlu menambahkan Anda ke daftar pengguna yang diizinkan sebelum Anda dapat membuat akun.
+	</string>
+	<string name="server_setup_help_setup_header">Pengaturan</string>
+	<string name="server_setup_help_setup_step1">Masukkan URL server, seperti "hammer.ink" untuk server resmi.
+	</string>
+	<string
+		name="server_setup_help_setup_step2">Masukkan email dan kata sandi Anda, lalu tekan "Buat" untuk membuat akun Anda.
+	</string>
+	<string name="server_setup_help_setup_step3">Di masa mendatang, dan di perangkat lain, Anda cukup menekan "Masuk".
+	</string>
+	<string name="server_setup_help_note_header">Catatan Penting</string>
+	<string
+		name="server_setup_help_note_body">Sinkronisasi di Hammer berbeda dari aplikasi berbasis daring seperti Google Docs. Sinkronisasi tidak berjalan waktu-nyata. Biasanya terjadi saat Anda membuka atau menutup aplikasi. Pastikan Anda tersinkron dengan versi terbaru proyek Anda sebelum luring. Hammer melakukan sinkronisasi otomatis, tetapi selalu baik untuk memeriksa jika Anda akan luring dalam waktu lama.
+	</string>
+	<string name="server_setup_help_dismiss_button">Paham</string>
+</resources>

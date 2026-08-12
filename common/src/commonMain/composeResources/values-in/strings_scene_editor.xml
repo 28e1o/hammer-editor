@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="save_draft_dialog_title">Mulai Draft Baru:</string>
+	<string name="save_draft_dialog_name_hint">Nama draft</string>
+	<string name="save_draft_dialog_save_button">Simpan</string>
+	<string name="save_draft_dialog_cancel_button">Batal</string>
+	<string name="save_draft_dialog_toast_success">Draft Tersimpan</string>
+	<string name="save_draft_dialog_current_draft">Menyimpan draft saat ini sebagai:</string>
+	<string name="save_draft_dialog_error">Nama draft saat ini tidak valid!</string>
+	<string name="scene_editor_rename_dialog_title">Ganti Nama Adegan</string>
+	<string name="scene_editor_name_hint">Nama Adegan</string>
+	<string name="scene_editor_rename_button">Ganti Nama</string>
+	<string name="scene_editor_cancel_button">Batal</string>
+	<string name="scene_editor_unsaved_chip">Belum Tersimpan</string>
+	<string name="scene_editor_save_button">Simpan</string>
+	<string name="scene_editor_metadata_button">Info Adegan</string>
+	<string name="scene_editor_toast_save_successful">Tersimpan</string>
+	<string name="scene_editor_menu_group">Adegan</string>
+	<string name="scene_editor_menu_item_save_draft">Draft Baru</string>
+	<string name="scene_editor_menu_item_view_drafts">Lihat Draft</string>
+	<string name="scene_editor_menu_item_rename">Ganti Nama</string>
+	<string name="scene_editor_menu_item_discard">Buang</string>
+	<string name="scene_editor_menu_item_delete">Hapus</string>
+	<string name="scene_editor_menu_item_archive">Arsipkan</string>
+	<string name="scene_editor_menu_item_save">Simpan</string>
+	<string name="scene_editor_menu_item_close">Tutup</string>
+
+	<string name="archive_scene_dialog_title">Arsipkan Adegan</string>
+	<string name="archive_scene_dialog_message">Anda yakin ingin mengarsipkan '%1$s'? Adegan akan disembunyikan dari daftar adegan tetapi dapat dipulihkan nanti.</string>
+	<string name="archive_scene_dialog_confirm">Arsipkan</string>
+	<string name="archive_scene_dialog_cancel">Batal</string>
+
+	<string name="discard_buffer_dialog_title">Buang Perubahan</string>
+	<string name="discard_buffer_dialog_message">Anda yakin ingin membuang semua perubahan yang belum disimpan pada '%1$s'? Ini akan memuat ulang versi terakhir yang disimpan dari disk.</string>
+	<string name="discard_buffer_dialog_confirm">Buang</string>
+	<string name="discard_buffer_dialog_cancel">Batal</string>
+
+	<string name="archived_scenes_dialog_title">Adegan yang Diarsipkan</string>
+	<string name="archived_scenes_empty">Tidak ada adegan yang diarsipkan</string>
+	<string name="archived_scenes_restore_button">Pulihkan</string>
+	<string name="archived_scenes_restored_snackbar">"%1$s" telah dipulihkan</string>
+	<string name="scene_archived_snackbar">"%1$s" telah diarsipkan</string>
+	<string name="view_archived_scenes_button">Lihat Arsip</string>
+
+	<string name="scene_editor_focus_mode_button">Masuk Mode Fokus</string>
+
+	<string name="scene_editor_metadata_title">Metadata</string>
+	<string name="scene_editor_metadata_hide_button">Sembunyikan Info</string>
+	<string name="scene_editor_metadata_word_count_label">Kata:</string>
+	<string name="scene_editor_metadata_advanced_header">Lanjutan</string>
+	<string name="scene_editor_metadata_entity_id">ID Entitas:</string>
+	<string name="scene_editor_metadata_entity_filename">Nama file:</string>
+	<string name="scene_editor_metadata_entity_path">Jalur:</string>
+	<string name="scene_editor_metadata_created_label">Dibuat</string>
+	<string name="scene_editor_metadata_edited_label">Disunting</string>
+	<string name="scene_editor_metadata_timestamp_unset">—</string>
+
+	<string name="scene_editor_metadata_outline_label">Garis Besar</string>
+	<string name="scene_editor_metadata_outline_placeholder">Deskripsi singkat tentang apa yang terjadi dalam adegan ini.</string>
+
+	<string name="scene_editor_metadata_notes_label">Catatan</string>
+	<string name="scene_editor_metadata_notes_placeholder">Catatan untuk diri sendiri.</string>
+	<string name="scene_editor_metadata_draft_name_label">Nama Draft</string>
+
+	<string name="scene_editor_metadata_references_header">Referensi</string>
+	<string name="scene_editor_metadata_references_dismissed_label">Dikesampingkan</string>
+	<string name="scene_editor_metadata_references_empty">Belum ada referensi</string>
+	<string name="scene_editor_metadata_references_dismiss">Kesampingkan</string>
+	<string name="scene_editor_metadata_references_restore">Pulihkan</string>
+	<string name="scene_editor_metadata_references_add_dismissed_hint">(dikesampingkan)</string>
+	<string name="scene_editor_metadata_references_characters_label">Tokoh</string>
+	<string name="scene_editor_metadata_references_locations_label">Lokasi</string>
+	<string name="scene_editor_metadata_references_other_label">Lainnya</string>
+	<string name="scene_editor_metadata_references_add_button">+ Tambah referensi</string>
+	<string name="scene_editor_metadata_references_add_dialog_title">Tambah referensi</string>
+	<string name="scene_editor_metadata_references_add_dialog_done">Selesai</string>
+	<string name="scene_editor_metadata_references_add_dialog_search_characters">Cari tokoh…</string>
+	<string name="scene_editor_metadata_references_add_dialog_search_locations">Cari lokasi…</string>
+	<string name="scene_editor_metadata_references_add_dialog_search_other">Cari entri…</string>
+	<string name="scene_editor_metadata_references_add_dialog_empty">Tidak ada entri yang cocok.</string>
+	<string name="scene_editor_metadata_references_add_dialog_close">Tutup dialog</string>
+
+	<string name="scene_editor_metadata_tags_header">Tag</string>
+	<string name="scene_editor_metadata_tags_empty">Belum ada tag</string>
+	<string name="scene_editor_metadata_tags_add_button">+ Tambah tag</string>
+	<string name="scene_editor_metadata_tags_add_dialog_title">Tambah tag</string>
+	<string name="scene_editor_metadata_tags_add_dialog_placeholder">tag1 tag2 …</string>
+	<string name="scene_editor_metadata_tags_add_dialog_done">Selesai</string>
+
+	<string name="scene_editor_no_scene_selected">Pilih Adegan untuk disunting</string>
+
+	<string name="default_draft_name">Draft Baru</string>
+</resources>
