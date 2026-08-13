@@ -11,12 +11,14 @@ import com.darkrockstudios.apps.hammer.common.components.globalsearch.GlobalSear
 import com.darkrockstudios.apps.hammer.common.components.globalsearch.GlobalSearchState
 import com.darkrockstudios.apps.hammer.common.components.globalsearch.SearchResult
 import com.darkrockstudios.apps.hammer.common.data.ProjectDef
+import com.darkrockstudios.apps.hammer.common.data.tagindex.TagIndexService
 import com.darkrockstudios.apps.hammer.common.fileio.HPath
 import io.mockk.*
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.koin.dsl.module
 import utils.BaseTest
 import kotlin.test.assertEquals
 import kotlin.test.assertSame
@@ -38,6 +40,8 @@ class GlobalSearchComponentTest : BaseTest() {
 	@MockK
 	private lateinit var searchState: GlobalSearchState
 
+	private lateinit var tagIndexService: TagIndexService
+
 	private val projectDef = ProjectDef(name = "Test", path = HPath("/p", "Test", false))
 	private val state = MutableValue(GlobalSearch.State())
 
@@ -46,7 +50,13 @@ class GlobalSearchComponentTest : BaseTest() {
 		super.setup()
 
 		MockKAnnotations.init(this, relaxUnitFun = true)
-		setupKoin()
+
+		tagIndexService = mockk(relaxed = true)
+		every { tagIndexService.getRankedTags(any()) } returns emptyList()
+
+		setupKoin(module {
+			single { tagIndexService } bind TagIndexService::class
+		})
 
 		every { lifecycle.state } returns Lifecycle.State.STARTED
 		every { context.lifecycle } returns lifecycle
