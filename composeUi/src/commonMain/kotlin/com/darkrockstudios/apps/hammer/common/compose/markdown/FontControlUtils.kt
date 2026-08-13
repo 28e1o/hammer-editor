@@ -5,7 +5,7 @@ import androidx.compose.ui.unit.sp
 import com.darkrockstudios.texteditor.markdown.MarkdownConfiguration
 import io.github.aakira.napier.Napier
 
-internal fun MarkdownConfiguration.changeFontSize(
+fun MarkdownConfiguration.changeFontSize(
 	newBaseFontSize: Float
 ): MarkdownConfiguration {
 	// Determine the baseline font size to adjust from

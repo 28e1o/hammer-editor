@@ -74,6 +74,7 @@ import com.darkrockstudios.apps.hammer.global_search_source_encyclopedia
 import com.darkrockstudios.apps.hammer.global_search_source_note
 import com.darkrockstudios.apps.hammer.global_search_source_scene
 import com.darkrockstudios.apps.hammer.global_search_source_timeline
+import com.darkrockstudios.apps.hammer.global_search_tag_filter
 import com.darkrockstudios.apps.hammer.global_search_title
 import com.darkrockstudios.apps.hammer.global_search_too_short
 import com.darkrockstudios.apps.hammer.ic_editor
@@ -148,7 +149,29 @@ fun GlobalSearchUi(component: GlobalSearch) {
 						modifier = Modifier.fillMaxWidth(),
 					)
 
-					if (state.parsedTags.isNotEmpty()) {
+					if (state.availableTags.isNotEmpty()) {
+						Column(
+							verticalArrangement = Arrangement.spacedBy(Ui.Padding.S),
+						) {
+							HdMonoLabel(
+								text = Res.string.global_search_tag_filter.get().uppercase()
+							)
+							LazyRow(
+								modifier = Modifier.fillMaxWidth(),
+								horizontalArrangement = Arrangement.spacedBy(Ui.Padding.S),
+							) {
+								items(state.availableTags, key = { it }) { tag ->
+									HdTagChip(
+										label = tag,
+										active = state.parsedTags.any {
+											it.equals(tag, ignoreCase = true)
+										},
+										onClick = { component.onTagToggled(tag) },
+									)
+								}
+							}
+						}
+					} else if (state.parsedTags.isNotEmpty()) {
 						LazyRow(
 							modifier = Modifier.fillMaxWidth(),
 							horizontalArrangement = Arrangement.spacedBy(Ui.Padding.S),

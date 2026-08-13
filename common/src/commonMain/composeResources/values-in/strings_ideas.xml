@@ -63,7 +63,7 @@
 
 	<string name="ideas_promote_button">Buat Proyek</string>
 	<string name="ideas_promote_dialog_title">Buat Proyek dari Ide</string>
-	<string name="ideas_promote_dialog_message">Sebuah proyek baru akan dibuat dan ide ini akan ditambahkan ke dalamnya sebagai catatan pertamanya.</string>
+	<string name="ideas_promote_dialog_message">Sebuah proyek baru akan dibuat dan ide ini akan menjadi catatan pertamanya.</string>
 	<string name="ideas_toast_promoted">Proyek dibuat: %1$s</string>
 	<string name="ideas_toast_promote_failed">Gagal membuat proyek</string>
 

@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -22,12 +23,20 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ExperimentalComposeApi
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
@@ -46,32 +55,49 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.arkivanov.decompose.extensions.compose.subscribeAsState
+import com.darkrockstudios.apps.hammer.Res
 import com.darkrockstudios.apps.hammer.common.TextEditorDefaults
 import com.darkrockstudios.apps.hammer.common.components.storyeditor.sceneeditor.SceneEditor
 import com.darkrockstudios.apps.hammer.common.compose.AnimatedDialog
 import com.darkrockstudios.apps.hammer.common.compose.ComposeRichText
 import com.darkrockstudios.apps.hammer.common.compose.LocalMarkdownConfig
 import com.darkrockstudios.apps.hammer.common.compose.RootSnackbarHostState
-import com.darkrockstudios.apps.hammer.common.compose.rememberDefaultDispatcher
 import com.darkrockstudios.apps.hammer.common.compose.Toaster
 import com.darkrockstudios.apps.hammer.common.compose.Ui
+import com.darkrockstudios.apps.hammer.common.compose.designsystem.HdMonoLabel
 import com.darkrockstudios.apps.hammer.common.compose.findShortcutModifier
+import com.darkrockstudios.apps.hammer.common.compose.icons.EditorIcons
+import com.darkrockstudios.apps.hammer.common.compose.icons.IconTextDecrease
+import com.darkrockstudios.apps.hammer.common.compose.icons.IconTextIncrease
+import com.darkrockstudios.apps.hammer.common.compose.markdown.changeFontSize
 import com.darkrockstudios.apps.hammer.common.compose.markdown.updateMarkdownConfiguration
 import com.darkrockstudios.apps.hammer.common.compose.markdowneditor.MarkdownFormatBar
+import com.darkrockstudios.apps.hammer.common.compose.markdowneditor.MarkdownView
 import com.darkrockstudios.apps.hammer.common.compose.markdowneditor.markdownFormatShortcuts
+import com.darkrockstudios.apps.hammer.common.compose.rememberDefaultDispatcher
+import com.darkrockstudios.apps.hammer.common.compose.resources.get
 import com.darkrockstudios.apps.hammer.common.compose.saveShortcutModifier
 import com.darkrockstudios.apps.hammer.common.data.UpdateSource
+import com.darkrockstudios.apps.hammer.common.data.projectstatistics.countWords
 import com.darkrockstudios.apps.hammer.common.storyeditor.scenelist.SceneDeleteDialog
 import com.darkrockstudios.apps.hammer.common.utils.toEditorSpellChecker
+import com.darkrockstudios.apps.hammer.markdown_format_bar_decrease_text_size
+import com.darkrockstudios.apps.hammer.markdown_format_bar_increase_text_size
+import com.darkrockstudios.apps.hammer.scene_editor_reader_mode_enter
+import com.darkrockstudios.apps.hammer.scene_editor_reader_mode_exit
+import com.darkrockstudios.apps.hammer.scene_editor_stats_summary
 import com.darkrockstudios.texteditor.find.FindBar
 import com.darkrockstudios.texteditor.find.rememberFindState
+import com.darkrockstudios.texteditor.markdown.MarkdownConfiguration
 import com.darkrockstudios.texteditor.rememberTextEditorStyle
 import com.darkrockstudios.texteditor.spellcheck.SpellCheckMode
 import com.darkrockstudios.texteditor.spellcheck.SpellCheckingTextEditor
 import com.darkrockstudios.texteditor.spellcheck.markdown.withMarkdown
 import com.darkrockstudios.texteditor.spellcheck.rememberSpellCheckState
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlin.time.TimeSource
 
 const val SCENE_EDITOR_TEXT_TAG = "scene-editor-text"
 const val SCENE_EDITOR_SAVE_TAG = "scene-editor-save"
@@ -104,6 +130,22 @@ fun SceneEditorUi(
 	val findState = rememberFindState(textEditorState.textState)
 	var showFindBar by remember { mutableStateOf(false) }
 
+	var readerMode by remember { mutableStateOf(false) }
+	var readerMarkdown by remember { mutableStateOf("") }
+	var readerScale by remember { mutableStateOf(1f) }
+	// Bumped on every editor edit so the status bar re-derives its word counts live.
+	var editorRevision by remember { mutableStateOf(0) }
+	// Word count when this editing session started, so the stats show only what was
+	// written during the session rather than the whole scene.
+	var sessionBaselineWords by remember { mutableStateOf(0) }
+
+	val enterReaderMode: () -> Unit = remember(markdownExtension) {
+		{
+			readerMarkdown = markdownExtension.exportAsMarkdown()
+			readerMode = true
+		}
+	}
+
 	LaunchedEffect(markdownConfig) {
 		markdownExtension.updateMarkdownConfiguration(markdownConfig)
 	}
@@ -117,6 +159,9 @@ fun SceneEditorUi(
 			if (!hasReceivedInitialBuffer || buffer.source != UpdateSource.Editor) {
 				val sceneMarkdown = withContext(defaultDispatcher) {
 					sceneContentMarkdown(buffer.content)
+				}
+				if (!hasReceivedInitialBuffer) {
+					sessionBaselineWords = countWords(sceneMarkdown)
 				}
 				loadSceneContent(markdownExtension, sceneMarkdown)
 				// Importing emits no edit operations, so the incremental checker never
@@ -133,6 +178,7 @@ fun SceneEditorUi(
 		if (hasReceivedInitialBuffer) {
 			textEditorState.textState.editOperations
 				.collect { _ ->
+					editorRevision++
 					component.onContentChanged(ComposeRichText(markdownExtension))
 				}
 		}
@@ -178,22 +224,31 @@ fun SceneEditorUi(
 					color = MaterialTheme.colorScheme.outlineVariant,
 				)
 
-				MarkdownFormatBar(
-					markdownState = markdownExtension,
-					decreaseTextSize = component::decreaseTextSize,
-					increaseTextSize = component::increaseTextSize,
-					resetTextSize = component::resetTextSize,
-					onFindReplace = { showFindBar = true },
-				)
+				if (!readerMode) {
+					MarkdownFormatBar(
+						markdownState = markdownExtension,
+						decreaseTextSize = component::decreaseTextSize,
+						increaseTextSize = component::increaseTextSize,
+						resetTextSize = component::resetTextSize,
+						onFindReplace = { showFindBar = true },
+					)
 
-				AnimatedVisibility(
-					visible = showFindBar,
-					enter = expandVertically(expandFrom = Alignment.Top),
-					exit = shrinkVertically(shrinkTowards = Alignment.Top)
-				) {
-					FindBar(
-						state = findState,
-						onClose = { showFindBar = false }
+					AnimatedVisibility(
+						visible = showFindBar,
+						enter = expandVertically(expandFrom = Alignment.Top),
+						exit = shrinkVertically(shrinkTowards = Alignment.Top)
+					) {
+						FindBar(
+							state = findState,
+							onClose = { showFindBar = false }
+						)
+					}
+				} else {
+					ReaderControlsBar(
+						scale = readerScale,
+						onDecrease = { readerScale = (readerScale - READER_SCALE_STEP).coerceAtLeast(READER_SCALE_MIN) },
+						onIncrease = { readerScale = (readerScale + READER_SCALE_STEP).coerceAtMost(READER_SCALE_MAX) },
+						onExit = { readerMode = false },
 					)
 				}
 
@@ -201,27 +256,51 @@ fun SceneEditorUi(
 					modifier = Modifier.fillMaxSize(),
 					horizontalArrangement = Arrangement.Center
 				) {
-					SpellCheckingTextEditor(
-						state = textEditorState,
-						contentPadding = PaddingValues(Ui.Padding.XL),
-						enabled = hasReceivedInitialBuffer,
-						style = rememberTextEditorStyle(
-							textStyle = TextStyle.Default.copy(
-								textIndent = TextIndent(firstLine = 24.sp)
+					if (readerMode) {
+						ReaderContent(
+							markdown = readerMarkdown,
+							markdownConfig = markdownConfig,
+							readerScale = readerScale,
+						)
+					} else {
+						SpellCheckingTextEditor(
+							state = textEditorState,
+							contentPadding = PaddingValues(Ui.Padding.XL),
+							enabled = hasReceivedInitialBuffer,
+							style = rememberTextEditorStyle(
+								textStyle = TextStyle.Default.copy(
+									textIndent = TextIndent(firstLine = 24.sp)
+								),
+								focusedBorderColor = Color.Transparent,
+								unfocusedBorderColor = Color.Transparent,
 							),
-							focusedBorderColor = Color.Transparent,
-							unfocusedBorderColor = Color.Transparent,
-						),
-						modifier = Modifier
-							.testTag(SCENE_EDITOR_TEXT_TAG)
-							.background(MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp))
-							.fillMaxHeight()
-							.widthIn(128.dp, TextEditorDefaults.MAX_WIDTH),
+							modifier = Modifier
+								.testTag(SCENE_EDITOR_TEXT_TAG)
+								.background(MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp))
+								.fillMaxHeight()
+								.widthIn(128.dp, TextEditorDefaults.MAX_WIDTH),
+						)
+
+						HorizontalDivider(modifier = Modifier.fillMaxHeight().width(1.dp))
+
+						SceneMetadataSidebar(component, isWide)
+					}
+				}
+
+				if (!readerMode) {
+					HorizontalDivider(
+						thickness = Dp.Hairline,
+						color = MaterialTheme.colorScheme.outlineVariant,
 					)
 
-					HorizontalDivider(modifier = Modifier.fillMaxHeight().width(1.dp))
-
-					SceneMetadataSidebar(component, isWide)
+					SceneEditorStatusBar(
+						editorRevision = editorRevision,
+						textProvider = {
+							textEditorState.textState.textLines.joinToString("\n") { it.text }
+						},
+						baselineWords = sessionBaselineWords,
+						onToggleReader = enterReaderMode,
+					)
 				}
 			}
 		}
@@ -261,6 +340,129 @@ fun SceneEditorUi(
 		}
 	}
 }
+
+@Composable
+private fun ReaderControlsBar(
+	scale: Float,
+	onDecrease: () -> Unit,
+	onIncrease: () -> Unit,
+	onExit: () -> Unit,
+) {
+	Row(
+		modifier = Modifier
+			.fillMaxWidth()
+			.background(MaterialTheme.colorScheme.surfaceContainerLow)
+			.padding(start = Ui.Padding.L, end = Ui.Padding.S, top = 4.dp, bottom = 4.dp),
+		verticalAlignment = Alignment.CenterVertically,
+		horizontalArrangement = Arrangement.spacedBy(Ui.Padding.S),
+	) {
+		HdMonoLabel(
+			text = "${Res.string.scene_editor_reader_mode_enter.get()} · ${(scale * 100).toInt()}%",
+			modifier = Modifier.padding(start = Ui.Padding.S),
+		)
+		Spacer(modifier = Modifier.weight(1f))
+		IconButton(onClick = onDecrease) {
+			Icon(
+				imageVector = EditorIcons.IconTextDecrease,
+				contentDescription = Res.string.markdown_format_bar_decrease_text_size.get(),
+				tint = MaterialTheme.colorScheme.onSurfaceVariant,
+			)
+		}
+		IconButton(onClick = onIncrease) {
+			Icon(
+				imageVector = EditorIcons.IconTextIncrease,
+				contentDescription = Res.string.markdown_format_bar_increase_text_size.get(),
+				tint = MaterialTheme.colorScheme.onSurfaceVariant,
+			)
+		}
+		IconButton(onClick = onExit) {
+			Icon(
+				imageVector = Icons.Default.Edit,
+				contentDescription = Res.string.scene_editor_reader_mode_exit.get(),
+				tint = MaterialTheme.colorScheme.onSurfaceVariant,
+			)
+		}
+	}
+}
+
+@Composable
+private fun ReaderContent(
+	markdown: String,
+	markdownConfig: MarkdownConfiguration,
+	readerScale: Float,
+) {
+	val scaledConfig = remember(markdownConfig, readerScale) {
+		markdownConfig.changeFontSize(
+			markdownConfig.defaultTextStyle.fontSize.value * readerScale
+		)
+	}
+	CompositionLocalProvider(LocalMarkdownConfig provides scaledConfig) {
+		Box(
+			modifier = Modifier
+				.fillMaxSize()
+				.background(MaterialTheme.colorScheme.surfaceColorAtElevation(1.dp))
+				.verticalScroll(rememberScrollState())
+				.padding(horizontal = Ui.Padding.XL, vertical = Ui.Padding.L),
+			contentAlignment = Alignment.TopCenter,
+		) {
+			MarkdownView(
+				markdown = markdown,
+				modifier = Modifier.widthIn(max = TextEditorDefaults.MAX_WIDTH),
+			)
+		}
+	}
+}
+
+@Composable
+private fun SceneEditorStatusBar(
+	editorRevision: Int,
+	textProvider: () -> String,
+	baselineWords: Int,
+	onToggleReader: () -> Unit,
+) {
+	val startMark = remember { TimeSource.Monotonic.markNow() }
+	var elapsedSeconds by remember { mutableStateOf(0L) }
+
+	LaunchedEffect(startMark) {
+		while (true) {
+			delay(1_000)
+			elapsedSeconds = startMark.elapsedNow().inWholeSeconds
+		}
+	}
+
+	val text = remember(editorRevision) { textProvider() }
+	val words = remember(editorRevision) { countWords(text) }
+	val chars = text.length
+	val sessionWords = (words - baselineWords).coerceAtLeast(0)
+	val minutes = elapsedSeconds / 60
+	val wpm = if (minutes > 0) (sessionWords / minutes).toInt() else 0
+	val time = "${minutes.toString().padStart(2, '0')}:${(elapsedSeconds % 60).toString().padStart(2, '0')}"
+
+	Row(
+		modifier = Modifier
+			.fillMaxWidth()
+			.background(MaterialTheme.colorScheme.surfaceContainerLow)
+			.padding(start = Ui.Padding.S, end = Ui.Padding.L, top = 4.dp, bottom = 4.dp),
+		verticalAlignment = Alignment.CenterVertically,
+	) {
+		IconButton(onClick = onToggleReader) {
+			Icon(
+				imageVector = Icons.Default.MenuBook,
+				contentDescription = Res.string.scene_editor_reader_mode_enter.get(),
+				tint = MaterialTheme.colorScheme.onSurfaceVariant,
+			)
+		}
+		Spacer(modifier = Modifier.weight(1f))
+		HdMonoLabel(
+			text = Res.string.scene_editor_stats_summary.get(words, chars, sessionWords, wpm, time),
+			modifier = Modifier.padding(end = Ui.Padding.S),
+		)
+	}
+}
+
+private const val READER_SCALE_MIN = 0.6f
+private const val READER_SCALE_MAX = 2.0f
+private const val READER_SCALE_STEP = 0.1f
 
 @Composable
 private fun SceneMetadataSidebar(component: SceneEditor, isWide: Boolean) {

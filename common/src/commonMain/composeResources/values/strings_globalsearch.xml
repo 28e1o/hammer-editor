@@ -16,4 +16,5 @@
 	<string name="global_search_filter_notes">Notes</string>
 	<string name="global_search_filter_encyclopedia">Encyclopedia</string>
 	<string name="global_search_filter_timeline">Timeline</string>
+	<string name="global_search_tag_filter">Filter by tag</string>
 </resources>

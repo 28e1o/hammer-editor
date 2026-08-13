@@ -21,7 +21,7 @@
 	<string name="project_home_stat_last_edited_scene">Terakhir Disunting</string>
 	<string name="project_home_stat_scene_median">Median</string>
 
-	<string name="project_home_stat_reading_time">≈ %1$d mnt membaca</string>
+	<string name="project_home_stat_reading_time">≈ %1$d menit membaca</string>
 	<string name="project_home_stat_pages">%1$d halaman</string>
 
 	<string name="project_home_stat_daily_goal">Target harian</string>

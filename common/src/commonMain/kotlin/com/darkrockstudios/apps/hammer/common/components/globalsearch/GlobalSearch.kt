@@ -10,6 +10,7 @@ interface GlobalSearch {
 
 	fun onQueryChanged(query: String)
 	fun onFilterChanged(filter: GlobalSearchFilter)
+	fun onTagToggled(tag: String)
 	fun onResultClicked(result: SearchResult)
 	fun dismiss()
 
@@ -17,6 +18,7 @@ interface GlobalSearch {
 		val query: String = "",
 		val parsedText: String = "",
 		val parsedTags: List<String> = emptyList(),
+		val availableTags: List<String> = emptyList(),
 		val filter: GlobalSearchFilter = GlobalSearchFilter.All,
 		val isSearching: Boolean = false,
 		val results: List<SearchResult> = emptyList(),

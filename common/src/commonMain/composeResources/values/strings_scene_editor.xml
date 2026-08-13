@@ -90,4 +90,11 @@
 	<string name="scene_editor_no_scene_selected">Select a Scene to edit</string>
 
 	<string name="default_draft_name">New Draft</string>
+
+	<string name="scene_editor_reader_mode_enter">Read mode</string>
+	<string name="scene_editor_reader_mode_exit">Edit mode</string>
+	<string name="scene_editor_reader_font_label">Text size</string>
+	<string name="scene_editor_stats_summary">%1$d W · %2$d CH · %3$d SES · %4$d WPM · %5$s</string>
+	<string name="scene_editor_focus_hide_ui">Hide UI</string>
+	<string name="scene_editor_focus_show_ui">Show UI</string>
 </resources>

@@ -15,6 +15,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Fullscreen
+import androidx.compose.material.icons.filled.FullscreenExit
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -49,6 +51,8 @@ import com.darkrockstudios.apps.hammer.common.data.UpdateSource
 import com.darkrockstudios.apps.hammer.common.storyeditor.sceneeditor.loadSceneContent
 import com.darkrockstudios.apps.hammer.common.storyeditor.sceneeditor.sceneContentMarkdown
 import com.darkrockstudios.apps.hammer.common.utils.toEditorSpellChecker
+import com.darkrockstudios.apps.hammer.scene_editor_focus_hide_ui
+import com.darkrockstudios.apps.hammer.scene_editor_focus_show_ui
 import com.darkrockstudios.apps.hammer.scene_editor_menu_item_close
 import com.darkrockstudios.texteditor.find.FindBar
 import com.darkrockstudios.texteditor.find.rememberFindState
@@ -77,6 +81,9 @@ fun FocusModeUi(component: FocusMode) {
 
 	val findState = rememberFindState(textEditorState.textState)
 	var showFindBar by remember { mutableStateOf(false) }
+	// Distraction-free "zen" mode: hides the format bar so only the text and a
+	// minimal exit affordance remain.
+	var chromeHidden by remember { mutableStateOf(false) }
 
 	LaunchedEffect(markdownConfig) {
 		markdownExtension.updateMarkdownConfiguration(markdownConfig)
@@ -122,43 +129,86 @@ fun FocusModeUi(component: FocusMode) {
 		Column(
 			modifier = Modifier
 				.fillMaxSize()
-				.focusModeChromePadding()
+				.then(
+					if (chromeHidden) Modifier else Modifier.focusModeChromePadding()
+				)
 				.findShortcutModifier { showFindBar = true }
 		) {
-			Row(
-				modifier = Modifier
-					.fillMaxWidth(),
-				horizontalArrangement = Arrangement.SpaceBetween,
-			) {
-				MarkdownFormatBar(
-					markdownState = markdownExtension,
-					decreaseTextSize = component::decreaseTextSize,
-					increaseTextSize = component::increaseTextSize,
-					onFindReplace = { showFindBar = true },
-					modifier = Modifier.weight(1f),
-				)
-
-				IconButton(
-					onClick = component::dismiss,
-					modifier = Modifier.background(MaterialTheme.colorScheme.surfaceVariant)
+			if (chromeHidden) {
+				Row(
+					modifier = Modifier
+						.fillMaxWidth(),
+					horizontalArrangement = Arrangement.End,
 				) {
-					Icon(
-						imageVector = Icons.Default.Close,
-						contentDescription = Res.string.scene_editor_menu_item_close.get(),
-						tint = MaterialTheme.colorScheme.onBackground
+					IconButton(
+						onClick = { chromeHidden = false },
+						modifier = Modifier.background(MaterialTheme.colorScheme.surfaceVariant)
+					) {
+						Icon(
+							imageVector = Icons.Default.FullscreenExit,
+							contentDescription = Res.string.scene_editor_focus_show_ui.get(),
+							tint = MaterialTheme.colorScheme.onBackground
+						)
+					}
+
+					IconButton(
+						onClick = component::dismiss,
+						modifier = Modifier.background(MaterialTheme.colorScheme.surfaceVariant)
+					) {
+						Icon(
+							imageVector = Icons.Default.Close,
+							contentDescription = Res.string.scene_editor_menu_item_close.get(),
+							tint = MaterialTheme.colorScheme.onBackground
+						)
+					}
+				}
+			} else {
+				Row(
+					modifier = Modifier
+						.fillMaxWidth(),
+					horizontalArrangement = Arrangement.SpaceBetween,
+				) {
+					MarkdownFormatBar(
+						markdownState = markdownExtension,
+						decreaseTextSize = component::decreaseTextSize,
+						increaseTextSize = component::increaseTextSize,
+						onFindReplace = { showFindBar = true },
+						modifier = Modifier.weight(1f),
+					)
+
+					IconButton(
+						onClick = { chromeHidden = true },
+						modifier = Modifier.background(MaterialTheme.colorScheme.surfaceVariant)
+					) {
+						Icon(
+							imageVector = Icons.Default.Fullscreen,
+							contentDescription = Res.string.scene_editor_focus_hide_ui.get(),
+							tint = MaterialTheme.colorScheme.onBackground
+						)
+					}
+
+					IconButton(
+						onClick = component::dismiss,
+						modifier = Modifier.background(MaterialTheme.colorScheme.surfaceVariant)
+					) {
+						Icon(
+							imageVector = Icons.Default.Close,
+							contentDescription = Res.string.scene_editor_menu_item_close.get(),
+							tint = MaterialTheme.colorScheme.onBackground
+						)
+					}
+				}
+
+				AnimatedVisibility(
+					visible = showFindBar,
+					enter = expandVertically(expandFrom = Alignment.Top),
+					exit = shrinkVertically(shrinkTowards = Alignment.Top)
+				) {
+					FindBar(
+						state = findState,
+						onClose = { showFindBar = false }
 					)
 				}
-			}
-
-			AnimatedVisibility(
-				visible = showFindBar,
-				enter = expandVertically(expandFrom = Alignment.Top),
-				exit = shrinkVertically(shrinkTowards = Alignment.Top)
-			) {
-				FindBar(
-					state = findState,
-					onClose = { showFindBar = false }
-				)
 			}
 
 			Row(

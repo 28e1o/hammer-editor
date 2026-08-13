@@ -90,4 +90,11 @@
 	<string name="scene_editor_no_scene_selected">Pilih Adegan untuk disunting</string>
 
 	<string name="default_draft_name">Draft Baru</string>
+
+	<string name="scene_editor_reader_mode_enter">Mode baca</string>
+	<string name="scene_editor_reader_mode_exit">Mode edit</string>
+	<string name="scene_editor_reader_font_label">Ukuran teks</string>
+	<string name="scene_editor_stats_summary">%1$d K · %2$d KR · %3$d SES · %4$d KPM · %5$s</string>
+	<string name="scene_editor_focus_hide_ui">Sembunyikan UI</string>
+	<string name="scene_editor_focus_show_ui">Tampilkan UI</string>
 </resources>

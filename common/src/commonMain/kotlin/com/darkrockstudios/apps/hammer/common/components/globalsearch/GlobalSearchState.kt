@@ -7,6 +7,7 @@ import com.arkivanov.essenty.instancekeeper.InstanceKeeper
 import com.darkrockstudios.apps.hammer.common.data.globalsearch.SearchProjectUseCase
 import com.darkrockstudios.apps.hammer.common.data.search.ParsedQuery
 import com.darkrockstudios.apps.hammer.common.data.search.parseQuery
+import com.darkrockstudios.apps.hammer.common.data.tagindex.normalizeTagNeedle
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -70,6 +71,31 @@ class GlobalSearchState(
 		_state.getAndUpdate { it.copy(filter = filter) }
 		val query = _state.value.query
 		startSearch(query, parseQuery(query), filter, debounce = false)
+	}
+
+	/** Publishes the project's tags so the UI can offer them as toggleable filter chips. */
+	fun setAvailableTags(tags: List<String>) {
+		_state.getAndUpdate { it.copy(availableTags = tags) }
+	}
+
+	/** Adds `#tag` to the active query if absent, or strips it out if present. */
+	fun toggleTag(tag: String) {
+		val needle = normalizeTagNeedle(tag)
+		if (needle.isEmpty()) return
+
+		val parsed = parseQuery(_state.value.query)
+		val tags = parsed.tags.toMutableList()
+		if (tags.removeAll { it == needle }) {
+			// was filtering on this tag; drop it
+		} else {
+			tags.add(needle)
+		}
+
+		val parts = buildList {
+			if (parsed.text.isNotBlank()) add(parsed.text)
+			tags.forEach { add("#$it") }
+		}
+		setQuery(parts.joinToString(" "))
 	}
 
 	private fun startSearch(
