@@ -18,6 +18,7 @@ import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.koin.dsl.bind
 import org.koin.dsl.module
 import utils.BaseTest
 import kotlin.test.assertEquals
@@ -52,7 +53,6 @@ class GlobalSearchComponentTest : BaseTest() {
 		MockKAnnotations.init(this, relaxUnitFun = true)
 
 		tagIndexService = mockk(relaxed = true)
-		every { tagIndexService.getRankedTags(any()) } returns emptyList()
 
 		setupKoin(module {
 			single { tagIndexService } bind TagIndexService::class
